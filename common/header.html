@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Rexpand</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+            .modal-pop {
+                position: fixed;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /* width: 300px; */
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                display: none;
+                z-index: 9999;
+                width: 500px;
+                height: 360px;
+            }
+
+            .popup-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                
+            }
+            .popup-content img {
+                width: 100%;
+            }
+            .modal-close {
+                position: absolute;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #000;
+                font-weight: 500;
+                top: 10px;
+                right: 10px;
+            }
+
+        /* 背景遮罩样式 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+            pointer-events: auto; /* 禁用背景区域的点击 */
+            overflow: hidden; /* 禁用背景区域的滚动 */
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <header id="home">
+        <div class="header-area">
+
+            <!-- header-bottom -->
+            <div class="header-bottom-area header-sticky" style="transition: .6s;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-6 col-6">
+                            <div class="header-bottom-icon f-right" id="free-materials">
+                                <ul>
+                                    <li class="free-material" >
+                                        <a>
+                                            <span class="">免费资料</span>
+                                        </a>
+                                    </li>
+                                        
+                                </ul>
+                            </div>
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li onclick="window.open('./index.html', '_self')">
+                                            <a>首页</a>
+                                        </li>
+                          
+                                        <li onclick="window.open('./events_01.html', '_self')">
+                                            <a>VIP项目</a>   
+                                        </li>
+                                        <li>
+                                            <a>背景提升项目</a>
+                                            <ul class="submenu">
+                                                <li onclick="window.open('./project_01.html', '_self')">
+                                                    <a>全栈工程师</a>
+                                                </li>
+                                                <li onclick="window.open('./project_02.html', '_self')">
+                                                    <a>投行建模</a>
+                                                </li>
+                                                <li onclick="window.open('./project_03.html', '_self')">
+                                                    <a>市场分析</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li onclick="window.open('./course_01.html', '_self')">
+                                            <a>成功案例</a>
+                                        </li>
+                                        <li onclick="window.open('./advisors.html', '_self')">
+                                            <a>关于我们</a>
+                                         </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /end header-bottom -->
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <div id="myModal" class="modal-pop">
+        <div class="popup-content">
+          <img src="img/events/free-resources.png">
+          <button class="modal-close">
+            <span class="ti-close"></span>
+          </button>
+        </div>
+        <!-- <div class="popup-content">
+          <p>弹窗内容</p>
+        </div> -->
+     </div>
+     <div id="overlay" class="overlay"></div>
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+
+            $('#free-materials').click(function() {
+                console.log('1111')
+                // alert('111')
+                $('#myModal').fadeIn();
+                $('#overlay').fadeIn();
+            });
+
+            // 关闭弹窗
+            $('.modal-close').click(function() {
+                $('#myModal').fadeOut();
+                $('#overlay').fadeOut();
+            });
+        });
+    </script>
+</body>
+
+</html>

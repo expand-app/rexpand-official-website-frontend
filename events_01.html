@@ -1,0 +1,643 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Rexpand</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .project-tabs {
+            flex: 0 0 200px;
+            padding-left:0px !important;
+            padding-right:30px !important;
+            color: #838383;
+            border-right: 2px solid #fff;
+            height: 470px;
+        }
+
+        .project-tab {
+            padding: 10px;
+            padding-left: 60px;
+            cursor: pointer;
+            position: relative;
+    
+        }
+
+        .project-tab.active {
+            /* border-left: 3px solid #008A27; */
+            background: rgba(0, 138, 39, 0.1);
+            color:#008A27
+        }
+
+        .project-tab.active::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: -2px;
+            /* transform: translateX(-50%); */
+            padding: 2px;
+            height: 44px;
+            background-color: #008A27;
+            /* color: #333; */
+            }
+        .project-content {
+            flex: 1;
+            padding: 10px 30px !important;
+        }
+
+        .tab-content {
+            display: none;
+            position: relative;
+        }
+        .project-time {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        .project-time span:first-child{
+            padding: 10px;
+            border: 1px solid #008A27;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .project-time span:last-child{
+            padding: 10px 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: 1px solid #008A27;
+            margin-left: -5px;
+
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .question-container{
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0px;
+            margin-bottom: 30px;
+        }
+        .question-container-mobile {
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0px;
+            margin-bottom: 30px;
+        }
+        .question-title {
+            line-height: 34px;
+            color: #1B1B1B;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .question-title-mobile {
+            line-height: 34px;
+            color: #1B1B1B;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .question-content {
+            display: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #838383;
+            margin-left: 20px;
+            /* padding: 10px; */
+        }
+        .question-content-mobile{
+            display: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #838383;
+            margin-left: 20px;
+            /* padding: 10px; */
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            /* background: #fff; */
+            /* padding: 20px; */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 9999;
+            width: 599px;
+            height: 346px;
+            }
+
+            .popup-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                
+            }
+            .popup-content img {
+                width: 100%;
+            }
+            .popup-close {
+                position: absolute;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: white;
+                top: 10px;
+                right: 10px;
+            }
+
+        /* 背景遮罩样式 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+            pointer-events: auto; /* 禁用背景区域的点击 */
+            overflow: hidden; /* 禁用背景区域的滚动 */
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <header id="header"></header>
+    <!-- header-end -->
+    <!-- slider-start -->
+    <div class="slider-area">
+        <div class="pages-title">
+            <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center" style="background-image: url(img/slider/event_banner.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="slider-content text-center">
+                                <!-- <h5 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">一飞冲天</h5> -->
+                                <h1 class="white-color f-700 mb-40" data-animation="fadeInUp" data-delay=".2s">Offer星计划</h1>
+                                <h3 data-animation="fadeInUp" data-delay=".4s" class="white-color mb-30 mt-30">1V1求职服务，根据学生个人需求和目标定制课程，从求职规划、导师匹配、背景提升、1对1辅导、到职位推荐，助你在竞争激烈的职场中斩获Offer。</h3>
+                                <button class="btn yellow-bg-btn" id="open-popup" data-animation="fadeInUp" data-delay=".6s">扫码添加导师                                 </button>
+                                <!-- <button class="btn yellow-bg-btn ml-25" data-animation="fadeInUp" data-delay=".6s">海外求职渠道</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-end -->
+    <div class="question-area gray-bg pt-120 pb-120">
+        <div class="container">
+            <h1 class="mb-20 weight500 text-center mb-90">打造求职桥梁，启航职业之旅。</h1>
+            <div class="row">
+               
+                <div class="col-xl-12 job-picture">
+                    <img src="img/bg/job_bg.svg">                   
+                </div>
+                <div class="col-xl-12 job-picture-mobile">
+                    <img src="img/bg/job_mobile.svg">                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonials start -->
+    <div class="projects-area pt-120 pd-120 ">
+        <div class="container">
+            <h1 class="mb-90 weight500 text-center white-color">项目安排</h1>
+            <!-- <h3 class="mb-50 text-center pb-20 white-color">德勤审计所有资料，保证所有Offer真实性</h3> -->
+            <div class="">
+                <div class="container project-area">
+                    <div class="project-tabs col-xl-3">
+                      <div class="project-tab active" data-tab="tab1">第一阶段</div>
+                      <div class="project-tab" data-tab="tab2">第二阶段</div>
+                      <div class="project-tab" data-tab="tab3">第三阶段</div>
+                      <div class="project-tab" data-tab="tab4">第四阶段</div>
+                      <!-- <div class="project-tab" data-tab="tab5">第五阶段</div> -->
+                    </div>
+                    <div class="project-content col-xl-8">
+                        <div id="tab1" class="tab-content active">
+                            <h2 class="mb-35 theme-color">Career Consultation</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>2周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>带领同学进行美国就业总览，进行职业规划与设计，确定求职目标、方向敲定</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>可申请职位title</li>
+                                <li>北美求职timeline</li>
+                                <!-- <li>简历相关学习资料</li>
+                                <li>简历修改逻辑</li>
+                                <li>简历详细解析</li> -->
+                            </ul>
+                        </div>
+                        <div id="tab2" class="tab-content">
+                            <h2 class="mb-35 theme-color">Resume</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>4周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>根据Original resume，引导同学进行brainstorm，详细了解同学的每段过往work experience，确定简历修改方向，同时帮助同学准备修改的简历内容，提供相关内容的学习资料，进行Resume update，解析简历修改逻辑及每个bullet内容。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>同学简历</li>
+                                <li>优秀简历模板</li>
+                                <li>简历相关学习资料</li>
+                                <li>简历修改逻辑与详细解析</li>
+                            </ul>
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <h2 class="mb-35 theme-color">Networking</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>6周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>带领同学学习领英使用，进行求职社交技能培训，辅导同学精修Cover lette、Networking email、Thank you letter、Follow-up email。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>Profile Headline</li>
+                                <li>Profile Summary</li>
+                                <li>LinkedIn Message</li>
+                                <li>社交邮件优秀案例</li>
+                                <li>求职信优秀案例/模板</li>
+                                <li>LinkedIn社交注意事项</li>
+                            </ul>
+                        </div>
+                        <div id="tab4" class="tab-content">
+                            <h2 class="mb-35 theme-color">Interview</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>8周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>对同学进行行业知识、与技术知识（Industry knowledge & Technical knowledge）培训，带领同学学习JD（Jod Description）的解读，进行行为面试、技术面试指导，以及如何讲好backup story（背景故事）。最终带领同学进行模拟面试与评估以及面试谈判技巧指导。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>行为面试Q&A</li>
+                                <li>技术面试Q&A</li>
+                                <li>工作经历backup story</li>
+                                <li>面试试题</li>
+                                <li>学习资源</li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+    <!-- testimonials end -->
+    <div class="question-area-mobile gray-bg pt-120 pb-120 col-xl-12">
+        <div class="container">
+            <h1 class="weight500 text-center mb-90">项目安排</h1>
+            <div class="row"> 
+                <div class="project-content">
+                    <div class="question-container-mobile">
+                        <h3 class="question-title-mobile">
+                            第一阶段
+                        </h3>
+                        <div class="question-content-mobile tab-content">
+                            <h2 class="mb-35 theme-color">Career Consultation</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>2周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>带领同学进行美国就业总览，进行职业规划与设计，确定求职目标、方向敲定</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>可申请职位title</li>
+                                <li>北美求职timeline</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-container-mobile">
+                        <h3 class="question-title-mobile">
+                            第二阶段
+                        </h3>
+                        <div class="question-content-mobile tab-content">
+                            <h2 class="mb-35 theme-color">Resume</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>4周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>根据Original resume，引导同学进行brainstorm，详细了解同学的每段过往work experience，确定简历修改方向，同时帮助同学准备修改的简历内容，提供相关内容的学习资料，进行Resume update，解析简历修改逻辑及每个bullet内容。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>同学简历</li>
+                                <li>优秀简历模板</li>
+                                <li>简历相关学习资料</li>
+                                <li>简历修改逻辑与详细解析</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-container-mobile">
+                        <h3 class="question-title-mobile">
+                            第三阶段
+                        </h3>
+                        <div class="question-content-mobile tab-content">
+                            <h2 class="mb-35 theme-color">Networking</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>6周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>带领同学学习领英使用，进行求职社交技能培训，辅导同学精修Cover lette、Networking email、Thank you letter、Follow-up email。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>Profile Headline</li>
+                                <li>Profile Summary</li>
+                                <li>LinkedIn Message</li>
+                                <li>社交邮件优秀案例</li>
+                                <li>求职信优秀案例/模板</li>
+                                <li>LinkedIn社交注意事项</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-container-mobile">
+                        <h3 class="question-title-mobile">
+                            第四阶段
+                        </h3>
+                        <div class="question-content-mobile tab-content">
+                            <h2 class="mb-35 theme-color">Interview</h2>
+                            <div class="project-time">
+                                <span class="bg-green white-color">预计</span>
+                                <span>8周</span>
+                            </div>
+                            <span class="title mb-30">
+                                具体内容
+                            </span>
+                            <p>对同学进行行业知识、与技术知识（Industry knowledge & Technical knowledge）培训，带领同学学习JD（Jod Description）的解读，进行行为面试、技术面试指导，以及如何讲好backup story（背景故事）。最终带领同学进行模拟面试与评估以及面试谈判技巧指导。</p>
+                            <span class="title mb-30">
+                                涉及资料
+                            </span>
+                            <ul class="label">
+                                <li>行为面试Q&A</li>
+                                <li>技术面试Q&A</li>
+                                <li>工作经历backup story</li>
+                                <li>面试试题</li>
+                                <li>学习资源</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand start -->
+    <div class="question-area gray-bg pt-120 pb-120">
+        <div class="container">
+            <h1 class="weight500 text-center mb-90">常见问题</h1>
+            <div class="row">
+               
+                <div class="col-xl-12" id="faq-container">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand end -->
+    <div class="customization-services">
+        <p class="theme-color">定制您的专属1对1服务计划</p>
+        <img src="img/QRcode/customization-servicesQR.png">
+    </div>
+
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+          <img src="img/events/modal.png">
+          <button class="popup-close">
+            <span class="ti-close"></span>
+          </button>
+        </div>
+        <!-- <div class="popup-content">
+          <p>弹窗内容</p>
+        </div> -->
+     </div>
+     <div id="overlay" class="overlay"></div>
+    <!-- subscribe start -->
+    <!-- subscribe end -->
+    <div id="footer">
+
+    </div>
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 加载底部
+        $(document).ready(function() {
+            var faqData = [
+                {
+                    question: "1对1VIP课程都有哪些内容？",
+                    answer: "咱们的VIP项目是一个完整的求职辅导闭环。一方面注重同学软实力的提升，比如简历修改与更新、行业知识梳理、社交技能指导、面试各环节模拟辅导等，另一方面帮助同学夯实技能基础，做好上岗前的充分准备。"
+                },
+                {
+                    question: "上课的形式是什么样的?",
+                    answer: "以线上直播课形式呈现。开课前，我们会和同学进行充分沟通，配备专属导师和辅导老师，建立求职档案库及辅导社群。根据同学需求及求职进展安排课程，约课成功后，同学可以在直播课堂上与导师实时互动，课堂笔记、学习资料等上传社群，课后疑难问题也会得到及时有效的解答。"
+                },
+                {
+                    question: "我报名进入你们项目后，多久能找到工作？",
+                    answer: "找到理想的工作需要考虑多个因素，包括个人背景、行业需求和市场竞争等等。平均来说，一般的周期在3-6个月，会比较常见，当然，咱们辅导项目里最快的同学不到一个月就成功拿到offer了。在项目期间，同学的通力配合、积极参与、灵活应用所学非常重要，这样才能充分掌握有关职业发展的关键知识，并获得定制化的建议和反馈，实现求职竞争力的提高，更快地达到就业目标。"
+                },
+                {
+                    question: "你们的简历优化服务包括哪些方面？",
+                    answer: "我们的简历优化服务包括对你现有简历的全面审查和改进。我们的导师将根据你的经历和目标，重新设计和优化你的简历，使其更具吸引力和有效性，以增加获得面试机会的可能性。"
+                },
+                {
+                    question: "如何提高我的面试技巧？",
+                    answer: "我们提供全面的面试准备服务。针对不同类型面试的策略和技巧，帮你准备常见的行为/技术面试问题回答宝典、backup story讲述技巧，除此之外会进行Mock interview、Technical training。我们的顾问将与你一起练习常见的面试问题，并提供实时反馈和个性化建议，帮助你在面试中展现自己的优势并增加成功的机会。"
+                },
+                {
+                    question: "你们的服务对象是谁？",
+                    answer: "我们的服务对象是：希望在北美找工作的求职者。无论是即将毕业的学生，还是期待在职业道路上寻找新机会的职场人士，我们都能提供帮助。"
+                },
+                {
+                    question: "你们为哪些领域的求职者提供服务？",
+                    answer: "我们的课程涵盖各种专业领域，目前主要针对于投资银行，资产管理，风险管理，数据分析，和金融科技。我们的课程设置是为了帮助学生获得专业知识，实践技能以及职业素养，最终通过面试获得工作机会。"
+                },
+                {
+                    question: "如果我有其他问题，我该如何联系你们？",
+                    answer: "如果您有任何问题，可以通过电子邮件，电话或者在我们的网站上直接发消息与我们联系。我们的客户服务团队会在最短时间内回复您的问题。"
+                },
+                // 其他问题和答案...
+            ];
+
+            var faqContainer = $("#faq-container");
+
+            // 循环生成问题和答案的 HTML 结构
+            $.each(faqData, function(index, faq) {
+                var container = $("<div>").addClass("question-container");
+                var title = $("<h3>").addClass("question-title").text(faq.question);
+                var content = $("<div>").addClass("question-content").text(faq.answer);
+                container.append(title, content);
+                faqContainer.append(container);
+            });
+            });
+
+        $(document).ready(function() {
+            // 加载顶部
+            $('#header').load('common/header.html');
+            // 加载底部
+            $('#footer').load('common/footer.html');
+
+            // 默认显示第一个 Tab
+            $('.tab-content:first').addClass('active');
+            $('.project-tab:first').addClass('active');
+
+            // 点击 Tab 切换内容
+            $('.project-tab').click(function() {
+                var tabId = $(this).data('tab');
+
+                // 隐藏所有内容
+                $('.tab-content').removeClass('active');
+                $('.project-tab').removeClass('active');
+
+                // 显示选中的 Tab 内容
+                $('#' + tabId).addClass('active');
+                $(this).addClass('active');
+            });
+            // 默认展开第一个标题对应的内容
+            $('.question-container-mobile:first-child .question-content-mobile').show();
+            $('.question-container-mobile').hover(
+                function() {
+                // 隐藏所有内容
+                // $('.tab-content').removeClass('active');
+                $('.question-content-mobile').hide();
+                // 鼠标移入时显示内容
+                $(this).find('.question-content-mobile').show();
+                },
+                function() {
+                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+                var container = $(this);
+                var title = container.find('.question-title-mobile');
+                var content = container.find('.question-content-mobile');
+
+                // 判断鼠标是否在标题和内容内移动
+                var isHover = title.is(':hover') || content.is(':hover');
+                if (!isHover) {
+                    content.hide();
+                }
+                }
+            );
+            // 默认展开第一个标题对应的内容
+            $('.question-container:first-child .question-content').show();
+            $('.question-container').hover(
+                function() {
+                // 鼠标移入时显示内容
+                $(this).find('.question-content').show();
+                },
+                function() {
+                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+                var container = $(this);
+                var title = container.find('.question-title');
+                var content = container.find('.question-content');
+
+                // 判断鼠标是否在标题和内容内移动
+                var isHover = title.is(':hover') || content.is(':hover');
+                if (!isHover) {
+                    content.hide();
+                }
+                }
+            );
+
+            $('#open-popup').click(function() {
+                $('#myPopup').fadeIn();
+                $('#overlay').fadeIn();
+            });
+
+            // 关闭弹窗
+            $('.popup-close').click(function() {
+                $('#myPopup').fadeOut();
+                $('#overlay').fadeOut();
+            });
+
+        });
+
+ </script>
+</body>
+
+</html>

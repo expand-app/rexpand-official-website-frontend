@@ -1,0 +1,686 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Rexpand</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .student-content {
+            text-align: center;
+        }
+        .tab {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 20px;
+            border-radius: 4px;
+            background: #F6F6F6;
+        }
+
+        .tab.active {
+            background: #D9D9D9;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .student-content-bottom {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 22px;
+            color: #A3A3A3
+        }
+        /* .student-content-bottom .info-label {
+            color: #A3A3A3
+        } */
+        .video-container {
+            /* position: relative; */
+        }
+        .video-play-btn{
+            position: absolute;
+            top:70px;
+            left:50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            padding: 0 10px;
+            color:#fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <header id="header"></header>
+    <!-- header-end -->
+    <!-- slider-start -->
+    <div class="slider-area">
+        <div class="page-title">
+            <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center" style="background-image: url(img/slider/course_banner.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="slider-content text-center">
+                                <h1 class="white-color f-700 mb-40" data-animation="fadeInUp" data-delay=".2s">看Emily如何斩获<br/>JPMorgan DS Offer</h3>
+                                <!-- <p data-animation="fadeInUp" data-delay=".4s">从会计转CS，我用10个月的时间成为了一个solid的软件工程师，并拿到了Zillow的offer。感谢来Offer帮助我系统提高CS能力，指引我保持在正确的学习和准备的道路上，并且鼓励我坚持下来。坚持下来，因为当胜利的曙光洒在你脸上，你才会明白，所有的努力，都因这一刻而闪闪发光。</p>
+                                <button class="btn yellow-bg-btn" data-animation="fadeInUp" data-delay=".6s">免费试听</button> -->
+                                <button class="btn yellow-bg-btn" data-animation="fadeInUp" data-delay=".6s">点击查看</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-end -->
+    <!-- courses start -->
+    <div class="courses-area courses-bg-height pt-120 pb-120" id="pagination-container">
+        <div class="container">
+            <div class="courses-list">
+                <div class="">
+                    <h1 class="mb-20 weight500 text-center">学员offer榜</h1>
+                    <h3 class="mb-90 text-center">恭喜Offer帮学员们斩获金融、咨询、数据等多个领域的Offer。</h3>
+                    <!-- <ul class="tabs">
+                        <li class="tab active" data-tab="all">全部</li>
+                        <li class="tab" data-tab="tab1">金融/四大</li>
+                        <li class="tab" data-tab="tab3">咨询</li>
+                        <li class="tab" data-tab="tab2">数据/科技</li>
+                    </ul> -->
+                </div>
+   
+                <div class="row" id="course-contents">
+  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- courses end -->
+        <!-- courses start -->
+        <div class="courses-area courses-bg-height gray-bg pt-120 pb-120">
+            <div class="container">
+                <div class="student-content">
+                    <h1 class="mb-90 weight500 text-center">学员心得</h1>
+                    <!-- <h3 class="mb-50 text-center pb-20">恭喜Offer帮学员们斩获金融、咨询、数据等多个领域的Offer。</h3> -->
+                    <!-- <ul class="tabs">
+                        <li class="tab active" data-tab="all">全部</li>
+                        <li class="tab" data-tab="tab1">金融/四大</li>
+                        <li class="tab" data-tab="tab3">咨询</li>
+                        <li class="tab" data-tab="tab2">数据/科技</li>
+                    </ul> -->
+                </div>
+                <div class="courses-list">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="courses-wrapper courses-wrapper-3 mb-30">
+                                <div class="students-thumb">
+                                    <div class="video-container">
+                                        <img src="img/courses/student3.png" alt="">
+                                        <span class="video-play-btn" data-video="img/courses/movie.mov"><i class="fa fa-play"></i></span>
+                                    </div>
+                                </div>
+                                <div class="student-content clearfix">
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="student-title">
+                                            <h3 class="weight500">Annie</h3>
+                                            <h5>Goldman Sachs</h3>
+                                        </div>
+                                    </div>
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="course-title-3 color83">
+                                            University of Illinois，Chicago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="courses-wrapper courses-wrapper-3 mb-30">
+                                <div class="students-thumb">
+                                    <div class="video-container">
+                                        <img src="img/courses/student1.png" alt="">
+                                        <span class="video-play-btn" data-video="img/courses/movie.mov"><i class="fa fa-play"></i></span>
+                                    </div>
+                                </div>
+                                <div class="student-content clearfix">
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="student-title">
+                                            <h3 class="weight500">Jonny</h3>
+                                            <h5>AWS</h3>
+                                        </div>
+                                    </div>
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="course-title-3 color83">
+                                            University of South Florida
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="courses-wrapper courses-wrapper-3 mb-30">
+                                <div class="students-thumb">
+                                    <div class="video-container">
+                                        <img src="img/courses/student2.png" alt="">
+                                        <span class="video-play-btn" data-video="img/courses/movie.mov"><i class="fa fa-play"></i></span>
+                                    </div>
+                                </div>
+                                <div class="student-content clearfix">
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="student-title">
+                                            <h3 class="weight500">Nancy</h3>
+                                            <h5>HSBC</h3>
+                                        </div>
+                                    </div>
+                                    <div class="courses-heading mt-15 d-flex">
+                                        <div class="course-title-3 color83">
+                                            Johns Hopkins University
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- courses end -->
+    <!-- footer start -->
+    <!-- footer start -->
+    <div id="footer">
+
+    </div>
+    <div id="videoModal" class="modal-pop">
+        <div class="popup-content">
+            <video id="videoPlayer" controls autoplay style="width: 100%;"></video></div>
+          <button class="vidoe-modal-close">
+            <span class="ti-close"></span>
+          </button>
+        </div>
+        <!-- <div class="popup-content">
+          <p>弹窗内容</p>
+        </div> -->
+     </div>
+     <div id="overlay" class="overlay"></div>
+    <!-- footer end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+    // Sample JSON data
+    var jsonData = [
+        {
+            name: 'W同学',
+            'school-zh': '波士顿大学',
+            'school-en': 'Boston University',
+            speciality: 'Data Science',
+            company: 'Deloitte',
+            position: 'Data Analyst',
+            img: 'img/icon/logo_img01.png'
+        },
+        {
+            name: 'Annie',
+            'school-zh': '伊利诺伊大学芝加哥分校',
+            'school-en': 'University of Illinois, Chicago',
+            speciality: 'MBA',
+            company: 'Goldman Sachs',
+            position: 'Equity Research Associate',
+            img: 'img/icon/logo_img02.png'
+        },
+        {
+            name: 'J同学',
+            'school-zh': '北卡大学教堂山分校',
+            'school-en': 'University of North Carolina--Chapel Hill',
+            speciality: 'Finance',
+            company: 'Bain',
+            position: 'Risk Management Associate',
+            img: 'img/icon/logo_img03.png'
+        },
+        {
+            name: 'T同学',
+            'school-zh': '加州大学戴维斯分校',
+            'school-en': 'University of California，Davis',
+            speciality: 'Computer Science & Engineering',
+            company: '百度',
+            position: 'Quantitative Developer',
+            img: 'img/icon/logo_img04.png'
+        },
+        {
+            name: 'Y同学',
+            'school-zh': '马里兰大学',
+            'school-en': 'University of Maryland',
+            speciality: 'Data Science',
+            company: 'Spotify',
+            position: 'Data Science',
+            img: 'img/icon/logo_img05.png'
+        },
+        {
+            name: 'Qinyun Cai  (Claire)',
+            'school-zh': '里海大学',
+            'school-en': 'Lehigh University',
+            speciality: ' Business Analytics',
+            company: 'Shift 4',
+            position: 'Financial  Analyst',
+            img: 'img/icon/logo_img06.png'
+        },
+        {
+            name: 'L同学',
+            'school-zh': '德克萨斯大学奥斯汀分校',
+            'school-en': 'University of Texas at Austin',
+            speciality: 'Financial Engineering',
+            company: '阿里巴巴',
+            position: 'Quantitative Finance Coordinator',
+            img: 'img/icon/logo_img07.png'
+        },
+        {
+            name: 'Nancy',
+            'school-zh': '约翰霍普金斯大学',
+            'school-en': 'Johns Hopkins University',
+            speciality: 'Finance',
+            company: 'HSBC',
+            position: 'Financial  Analyst',
+            img: 'img/icon/logo_img08.png'
+        },
+        {
+            name: 'H同学',
+            'school-zh': '西北大学',
+            'school-en': 'Northwestern University',
+            speciality: 'Business Analytics',
+            company: '中信银行',
+            position: 'Business Analyst',
+            img: 'img/icon/logo_img09.png'
+        },
+        {
+            name: 'L同学',
+            'school-zh': '俄亥俄州立大学',
+            'school-en': 'Ohio State University',
+            speciality: 'Finance',
+            company: 'PwC',
+            position: 'Financial  Analyst',
+            img: 'img/icon/logo_img01.png'
+        },
+        {
+            name: 'Hongrui  Liu (Frank)',
+            'school-zh': '圣路易斯华盛顿大学',
+            'school-en': 'Washington University (St. Louis)',
+            speciality: 'Financial Engineering & Data Science',
+            company: 'Capital One',
+            position: 'Business Analyst',
+            img: 'img/icon/logo_img02.png'
+        },
+        {
+            name: 'L同学',
+            'school-zh': '杜克大学',
+            'school-en': 'Duke University',
+            speciality: 'Computer Science',
+            company: 'Oracle',
+            position: 'Data Management Associate',
+            img: 'img/icon/logo_img03.png'
+        },
+        {
+            name: 'X同学',
+            'school-zh': '纽约大学',
+            'school-en': 'New York University',
+            speciality: 'Finance',
+            company: 'Netflix',
+            position: 'Finance Coordinator',
+            img: 'img/icon/logo_img04.png'
+        },
+        {
+            name: 'Jason',
+            'school-zh': '德克萨斯大学达拉斯分校',
+            'school-en': 'University of Texas at Dallas',
+            speciality: 'FinaBusiness Analyticsnce',
+            company: 'Zions Bank',
+            position: 'Business Analyst',
+            img: 'img/icon/logo_img05.png'
+        },
+        {
+            name: 'Jessica',
+            'school-zh': '佛罗里达州立大学',
+            'school-en': 'Florida State University',
+            speciality: 'Data Science',
+            company: '7-Eleven',
+            position: 'Data Analyst',
+            img: 'img/icon/logo_img06.png'
+        },
+        {
+            name: 'C同学',
+            'school-zh': '罗切斯特大学',
+            'school-en': 'University of Rochester',
+            speciality: 'Financial Engineering',
+            company: 'Citigroup Inc.',
+            position: 'Quantitative Strategist',
+            img: 'img/icon/logo_img07.png'
+        },
+        {
+            name: 'Jeff',
+            'school-zh': '加州大学洛杉矶分校',
+            'school-en': 'University of California, Los Angeles',
+            speciality: 'Financial Mathematics',
+            company: 'McKinsey',
+            position: 'Data Science',
+            img: 'img/icon/logo_img08.png'
+        },
+        {
+            name: 'F同学',
+            'school-zh': '哥伦比亚大学',
+            'school-en': 'Columbia University',
+            speciality: 'Finance',
+            company: 'Roland Berger',
+            position: 'Financial  Analyst',
+            img: 'img/icon/logo_img09.png'
+        },
+        {
+            name: 'Jonny',
+            'school-zh': '南佛罗里达大学',
+            'school-en': 'University of South Florida',
+            speciality: 'Computer Science',
+            company: 'AWS',
+            position: 'Data Science',
+            img: 'img/icon/logo_img01.png'
+        },
+        {
+            name: 'Z同学',
+            'school-zh': '杜克大学',
+            'school-en': 'Duke University',
+            speciality: 'Computer Science',
+            company: 'Google',
+            position: 'Data Engineer',
+            img: 'img/icon/logo_img02.png'
+        },
+        {
+            name: 'Ronnie',
+            'school-zh': '伊利诺伊大学香槟分校',
+            'school-en': 'University of Illinois at Urbana-Champaign',
+            speciality: 'Statistics&Accounting',
+            company: 'BCG',
+            position: 'Data Analyst',
+            img: 'img/icon/logo_img03.png'
+        },
+        {
+            name: 'Yuqin Chen',
+            'school-zh': '普渡大学',
+            'school-en': 'Purdue University',
+            speciality: '',
+            company: 'QiaoLin Hot Pot',
+            position: 'Management Trainee',
+            img: 'img/icon/logo_img04.png'
+        },
+        {
+            name: 'Tianqi',
+            'school-zh': '南加州大学',
+            'school-en': 'University of Southern California',
+            speciality: 'Compuer Science',
+            company: 'Uber',
+            position: 'Software Develop Engineer',
+            img: 'img/icon/logo_img05.png'
+        },
+        {
+            name: 'X同学',
+            'school-zh': '加州大学圣塔芭芭拉分校',
+            'school-en': 'University of California--Santa Barbara',
+            speciality: 'Economics and Accounting',
+            company: 'Berkshire Hathaway',
+            position: 'Portfolio Coordinator',
+            img: 'img/icon/logo_img06.png'
+        },
+        {
+            name: '郭同学',
+            'school-zh': '乔治城大学',
+            'school-en': 'Georgetown University',
+            speciality: 'Finance',
+            company: 'Wells Fargo',
+            position: 'Asset Coordinator',
+            img: 'img/icon/logo_img07.png'
+        },
+        {
+            name: 'L同学',
+            'school-zh': '埃默里大学',
+            'school-en': 'Emory University',
+            speciality: 'Finance',
+            company: 'Tesla, Inc.',
+            position: 'Financial  Analyst',
+            img: 'img/icon/logo_img08.png'
+        },
+        {
+            name: 'Frank',
+            'school-zh': '圣路易斯华盛顿大学',
+            'school-en': 'Washington University (St. Louis)',
+            speciality: 'Data Science',
+            company: 'Capital One',
+            position: 'Business Analyst',
+            img: 'img/icon/logo_img09.png'
+        },
+        {
+            name: 'Emily',
+            'school-zh': '德克萨斯大学奥斯汀分校',
+            'school-en': 'University of Texas at Austin',
+            speciality: 'Data Science',
+            company: 'JPMorgan',
+            position: 'Data Science',
+            img: 'img/icon/logo_img01.png'
+        },
+        {
+            name: 'D同学',
+            'school-zh': '密歇根安娜堡大学',
+            'school-en': 'University of Michigan--Ann Arbor',
+            speciality: 'Computer Science & Engineering',
+            company: 'Morgan Stanley',
+            position: 'Quantitative Developer',
+            img: 'img/icon/logo_img02.png'
+        },
+        {
+            name: 'Ziheng Song   (Teddy)',
+            'school-zh': '旧金山大学',
+            'school-en': 'University of San Francisco',
+            speciality: 'Financial Analysis',
+            company: 'Segway- Accountant   New York Life',
+            position: 'Insurance-Financial advisor',
+            img: 'img/icon/logo_img03.png'
+        }
+    ];
+
+    // Function to generate HTML code
+    function generateHTML(jsonData) {
+        var html = '';
+
+        // Iterate over each JSON object
+        jsonData.forEach(function (data) {
+            html += '<div class="col-xl-4 col-lg-4 col-md-6 content">';
+            html += '<div class="courses-wrapper mb-30">';
+            html += '<div class="courses-thumb">';
+            html += '<a><img src="' + data.img + '" alt=""></a>';
+            html += '</div>';
+            html += '<div class="course-main-content clearfix">';
+            html += '<div class="courses-content">';
+            html += '<div class="courses-heading">';
+            html += '<h1>' + data.name + '</h1>';
+            html += '</div>';
+            html += '<div class="courses-para">';
+            html += '<p>' + data.company + '<br>' + data.position + '</p>';
+            html += '</div>';
+            html += '<div class="student-content-bottom">';
+            html += '<div>';
+            html += '<span class="info-label">学校：</span>';
+            html += '<span class="info-content">' + data['school-zh'] + '</span>';
+            html += '</div>';
+            html += '<div>';
+            html += '<span class="info-label">专业：</span>';
+            html += '<span class="info-content">' + data.speciality + '</span>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+        });
+
+        return html;
+    }
+
+    // Generate HTML code
+    var generatedHTML = generateHTML(jsonData);
+
+    // Append the generated HTML to a container element
+    $('#course-contents').append(generatedHTML);
+    });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // 加载顶部
+            $('#header').load('common/header.html');
+            // 加载底部
+            $('#footer').load('common/footer.html');
+
+            $('.tab').click(function() {
+                // 获取点击的选项卡的data-tab值
+                var tabId = $(this).attr('data-tab');
+
+                // 隐藏所有的内容
+                $('.content').hide();
+
+               // 如果点击的是 "全部" 选项卡，则显示所有内容
+               if (tabId === 'all') {
+                    $('.content').show();
+                } else {
+                    // 显示与选项卡匹配的内容
+                    $('[data-tab="' + tabId + '"]').show();
+                }
+
+                // 移除所有选项卡按钮的选中样式
+                $('.tab').removeClass('active');
+
+                // 添加选中样式到当前选项卡按钮
+                $(this).addClass('active');
+            });
+
+                // 默认展示全部内容
+            $('[data-tab="all"]').click();
+            $('.video-play-btn').click(function(e) {
+                e.preventDefault();
+                 // 设置视频源
+                var videoUrl = $(this).data('video');
+                $('#videoPlayer').attr('src', videoUrl);
+                $('#videoModal').fadeIn();
+                $('#overlay').fadeIn();
+            });
+
+            // 关闭弹窗
+            $('.vidoe-modal-close').click(function() {
+
+                $('#videoModal').fadeOut();
+                $('#overlay').fadeOut();
+            });
+
+            // 翻页
+                  // 将内容分页为每页两个
+                  var itemsPerPage = 9;
+            var $content = $('.content');
+            var totalPages = Math.ceil($content.length / itemsPerPage);
+
+            // 创建分页导航
+            var $paginationContainer = $('#pagination-container');
+            var $pagination = $('<nav class="course-pagination mb-30" aria-label="Page navigation example"></nav>');
+            var $paginationList = $('<ul class="pagination justify-content-center"></ul>');
+
+            // 添加上一页按钮
+            // var $prevItem = $('<li class="page-item"><a class="page-link" ><span class="ti-angle-left"></span></a></li>');
+            // $paginationList.append($prevItem);
+
+            // 添加每个页面的链接
+            for (var i = 1; i <= totalPages; i++) {
+                var $pageItem = $('<li class="page-item"><a class="page-link"  data-page="' + i + '">' + i + '</a></li>');
+                $paginationList.append($pageItem);
+            }
+
+            // 添加下一页按钮
+            // var $nextItem = $('<li class="page-item"><a class="page-link" ><span class="ti-angle-right"></span></a></li>');
+            // $paginationList.append($nextItem);
+
+            $pagination.append($paginationList);
+            $paginationContainer.append($pagination);
+
+            // 默认显示第一页的内容
+            showPage(1);
+
+            // 分页链接点击事件
+            $paginationList.on('click', 'a', function(e) {
+                e.preventDefault();
+                var page = $(this).data('page');
+                showPage(page);
+            });
+
+            // 显示指定页码的内容
+            function showPage(page) {
+                var startIndex = (page - 1) * itemsPerPage;
+                var endIndex = startIndex + itemsPerPage;
+
+                $content.hide();
+                $content.slice(startIndex, endIndex).show();
+
+                // 更新分页导航的活动状态
+                $paginationList.find('.active').removeClass('active');
+                $paginationList.find('a[data-page="' + page + '"]').parent().addClass('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

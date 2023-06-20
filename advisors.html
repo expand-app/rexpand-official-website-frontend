@@ -1,0 +1,532 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Rexpand</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .video-container {
+            /* position: relative; */
+        }
+        .video-play-btn{
+            position: absolute;
+            top:70px;
+            left:50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            padding: 0 10px;
+            color:#fff
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <header id="header"></header>
+    <!-- header-end -->
+    <!-- slider-start -->
+    <div class="slider-area">
+        <div class="page-title">
+            <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center" style="background-image: url(img/slider/about_banner.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="slider-content text-center">
+                                <h1 class="white-color f-700 mb-40" data-animation="fadeInUp" data-delay=".2s">关于我们</h1>
+                                <h3 data-animation="fadeInUp" data-delay=".4s" class="white-color mb-30 mt-30">从会刚毕业时，我对找工作毫无头绪，感谢Rexpand的老师引导我一步步找到兴趣方向，
+                                    帮助我丰富专业技能和面试培训，最终拿到了小摩的Offer。</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-end -->
+       <!-- team start -->
+       <div class="team-area pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+                    <div class="section-title mb-50 text-center">
+                        <div class="section-title-heading mb-20">
+                            <h1 class="mb-20 weight500 text-center lh67 color1c">我们的优势</h1>
+                            <h3 class="mb-20 text-center pb-20 lh43">知识技能并行，铺平职业路径</h3>
+                            <h3 class="mb-90 text-center pb-20 color83">截止2023，数千名同学通过Rexpand获得了包括JPMorgan、Goldman Sachs、PwC、Google、Oracle等顶级投行、四大、咨询、科技公司的Offer</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-list">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="mb-30">
+                            <div class="about-thumb">
+                                <img src="img/icon/about_icon1.svg" alt="">
+                            </div>
+                            <div class="advantage-info text-center">
+                                <h3 class="lh36 color61">精准匹配导师</h3>
+                                <h5 class="lh22 color83">多名不同学科、不同职业方向、且专业性极强的导师，总有一个适合你。</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="mb-30">
+                            <div class="about-thumb">
+                                <img src="img/icon/about_icon2.svg" alt="">
+                            </div>
+                            <div class="advantage-info text-center">
+                                <h3 class="lh36 color61">专业技能强化</h3>
+                                <h5 class="lh22 color83">课程团队设计出了一套科学体系，将课程、练习、实践相结合，高效强化求职所需技能。</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="mb-30">
+                            <div class="about-thumb">
+                                <img src="img/icon/about_icon3.svg" alt="">
+                            </div>
+                            <div class="advantage-info text-center">
+                                <h3 class="lh36 color61">内推岗位丰富</h3>
+                                <h5 class="lh22 color83">整合金融、科技顶级企业内推资源，让你搭上面试直通车。</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team end -->
+       <!-- latest_news start -->
+       <div id="blog" class="latest_news-area gray-bg pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+                    <div class="section-title text-center">
+                        <h1 class="mb-20 weight500 text-center lh67 color1c">专业导师团队</h1>
+                        <h3 class="mb-90 text-center pb-20 lh43">导师全部来自华尔街、硅谷顶级投行、科技公司并担任Senior Manager/Staff等资深职位。</h3>
+                        <!-- <h2 class="mb-20 text-center pb-20">导师全部来自华尔街、硅谷顶级投行、科技公司并担任Senior Manager/Staff等资深职位。</h2> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Wilson老师</h5>
+                                    <p>曾任职Goldman Sachs投行部和EY交易咨询部，
+                                        8年求职辅导经验</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Finance</li>
+                                    <li>Data Analytics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+                    
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Lance老师</h5>
+                                    <p>担任知名银行的VP兼Senior Manager</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Data Engineer</li>
+                                    <li>Data Analytics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+                    
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Shuo老师</h5>
+                                    <p>AWS资深软件工程师</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Machine Learning</li>
+                                    <li>Software Engineer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">  
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Max老师</h5>
+                                    <p>就职于Flag大厂，多年计算机求职辅导经验</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Soft Development Engineer（SDE）</li>
+                                    <!-- <li>Software Engineer</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">  
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Yang老师</h5>
+                                    <p>担任Goldman Sachs信贷量化研究VP</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Risk</li>
+                                    <li>Quant</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">  
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Jiexuan老师 </h5>
+                                    <p>深耕金融行业，丰富的Valuation、Asset Evaluation经验</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Financial Analyst</li>
+                                    <li>Operation（Investment Banking）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-20">  
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Leo老师</h5>
+                                    <p>就职于Amazon Pharmacy组，在零售和电子商务行业有丰富经验 </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content pb-60">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Business Analyst</li>
+                                    <!-- <li>Software Engineer</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 ">
+                    <div class="blog-wrapper mb-30 teacher-area">
+                        <div class="teacher-thumb mb-25 pt-40 pb-40">
+                            <a href="news_details.html">
+                                <img src="img/blog/blog_thumb_2.jpg" alt="">
+                                <div class="teacher-thumb-right">
+                                    <h5>Shuo老师</h5>
+                                    <p>AWS资深软件工程师</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teaching-team-content">
+                            <div class="responsibility">
+                                <div class="label">
+                                    专攻领域
+                                </div>
+                                <ul>
+                                    <li>Machine Learning</li>
+                                    <li>Software Engineer</li>
+                                    <li>Mock Interview</li>
+                                    <li>Technical Training</li>
+                                </ul>
+                            </div>
+                            <div class="responsibility">
+                                <div class="label">
+                                    亮点展示
+                                </div>
+                                <ul>
+                                    <li>曾任职AWS和知名创业企业Landing AI</li>
+                                    <li>精通算法和前后端开发以及人工智能</li>                                        
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- latest_blog end -->
+    <!-- slider-start -->
+    <div class="slider-area pt-120 pb-120">
+        <div class="page-title">
+            <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center" style="background-image: url(img/bg/about_bg.png);">
+                <div class="container">
+                    <div class="row contact-info">
+                        <div class="col-xl-4 offset-xl-2 col-lg-6 col-md-10 offset-md-1 ml-md-auto">
+                            <div class="contact-info-text">
+                                <div class="section-title mb-20">
+                                    <div class="section-title-heading mb-10">
+                                        <h2>关于更多知识可扫码</h2>
+                                    </div>
+                                    <div class="section-title-para">
+                                        <h6 class="color83">联系方式</h6>
+                                        <h4 class="color1c lh28">info@rexpandco.com</h4>
+                                        <h5 class="color1c lh24">扫一扫！了解更多相关咨询</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mb-50 wow fadeInRight" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
+                                <img src="img/QRcode/customization-servicesQR.png">
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6 col-md-10 offset-md-1 ml-md-auto">
+                            <div class="events-details-form faq-area-form mb-30 p-0">
+                                <form id="contact-form">
+                                    <div class="row">
+                                      <div class="col-xl-8">
+                                        <div class="events-form-title mb-25">
+                                          <h4 class="color1c lh28">您想咨询我们一点什么呢？</h4>
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <input id="name-input" placeholder="您的名字" type="text" required>
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <input id="email-input" placeholder="联系邮箱" type="email" required>
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <input id="wechat-input" placeholder="微信号" type="text">
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <input id="consult-input" placeholder="相关咨询" type="text">
+                                      </div>
+                                      <div class="col-xl-12">
+                                        <textarea id="message-input" cols="30" rows="10" placeholder="请输入您想对我们说的悄悄话"></textarea>
+                                      </div>
+                                      <div class="col-xl-12">
+                                        <div class="faq-form-btn events-form-btn">
+                                          <button id="submit-btn" class="btn white-color">提交</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-end -->
+    <!-- footer start -->
+    <div id="footer">
+
+    </div>
+    <!-- footer end -->
+  
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 加载顶部
+            $('#header').load('common/header.html');
+            // 加载底部
+            $('#footer').load('common/footer.html');
+
+            $('.video-play-btn').click(function() {
+                e.preventDefault();
+                 // 设置视频源
+                var videoUrl = $(this).data('video');
+                $('#videoPlayer').attr('src', videoUrl);
+                $('#myModal').fadeIn();
+                $('#overlay').fadeIn();
+            });
+
+            // 关闭弹窗
+            $('.modal-close').click(function() {
+
+                $('#myModal').fadeOut();
+                $('#overlay').fadeOut();
+            });
+
+            // 创建模态弹窗
+            $('<div id="modalDialog"><video id="videoPlayer" controls autoplay style="width: 100%;"></video></div>').dialog({
+                autoOpen: false, // 初始不显示
+                modal: true, // 模态对话框，阻止用户操作页面
+                resizable: true, // 不可调整大小
+                draggable: true, // 不可拖拽
+                width: '80%', // 弹窗宽度
+                height: 'auto', // 弹窗高度
+                open: function() {
+                // 创建遮照层
+                $('<div id="modalOverlay"></div>').appendTo('body');
+                },
+                close: function() {
+                // 移除遮照层
+                $('#modalOverlay').remove();
+                },
+            });
+
+
+                // 表单提交事件处理
+    $("#contact-form").submit(function(event) {
+      event.preventDefault(); // 阻止默认的表单提交行为
+
+      // 获取表单输入值
+      var name = $("#name-input").val();
+      var email = $("#email-input").val();
+      var wechat = $("#wechat-input").val();
+      var consult = $("#consult-input").val();
+      var message = $("#message-input").val();
+
+      // 发送电子邮件
+      var emailData = {
+        name: name,
+        email: email,
+        wechat: wechat,
+        consult: consult,
+        message: message
+      };
+      console.log(emailData, '信息')
+
+      var content = "姓名：" + name + "%0D%0A邮箱：" + email + "%0D%0A微信：" + wechat + "%0D%0A相关咨询：" + consult + "%0D%0A消息：" + message  // 邮件内容
+
+
+    const recipient = 'info@intelliimpact.com';
+  
+    const emailLink = `mailto:${recipient}?subject=${encodeURIComponent(name)+ '的求职意向'}&body=${(content)}`;
+
+    window.open(emailLink);
+    });
+
+    // 邮箱输入校验
+    $("#email-input").on("input", function() {
+      var email = $(this).val();
+      var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        $(this).addClass("invalid");
+      } else {
+        $(this).removeClass("invalid");
+      }
+    });
+  });
+    </script>
+</body>
+
+</html>
