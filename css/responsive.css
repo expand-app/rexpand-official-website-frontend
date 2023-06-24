@@ -1332,4 +1332,14 @@
         width: 80%;
         top: 40%;
     }
+    .customization-services.showPc {
+        display: none;
+    }
+    .footer-btn {
+        display: flex;
+    }
+
+    /* .customization-services.showMobile {
+        display: inline-block;
+    } */
 }

@@ -173,7 +173,22 @@
                 top: 10px;
                 right: 10px;
             }
-
+            .popup-close-service {
+                position: absolute;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #838383;
+                top: -20px;
+                left: -35px;
+                background: #fff;
+                border-radius: 50%;
+                font-size: 20px;
+                font-weight: bolder;
+            }
+            .popup-close-service .ti-close {
+                font-weight: bolder;
+            }
         /* 背景遮罩样式 */
         .overlay {
             position: fixed;
@@ -463,11 +478,17 @@
         </div>
     </div>
     <!-- brand end -->
-    <div class="customization-services">
+    <div class="customization-services showPc">
         <p class="theme-color">定制您的专属1对1服务计划</p>
         <img src="img/QRcode/customization-servicesQR.png">
     </div>
-
+    <div class="customization-services showMobile">
+        <p class="theme-color">定制您的专属1对1服务计划</p>
+        <img src="img/QRcode/customization-servicesQR.png">
+        <button class="popup-close-service">
+            <span class="ti-close"></span>
+        </button>
+    </div>
     <div id="myPopup" class="popup">
         <div class="popup-content">
           <img src="img/events/modal.png">
@@ -486,6 +507,13 @@
 
     </div>
 
+    <div class="footer-btn">
+        <div>想要了解更多吗？</div>
+        <div>
+            <!-- <btn>免费资料</btn> -->
+            <button id="showMobileService">服务计划</button>
+        </div>
+    </div>
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -635,6 +663,18 @@
                 $('#overlay').fadeOut();
             });
 
+
+            // showMobileService
+            $('#showMobileService').click(function() {
+                $('.showMobile').fadeIn();
+                // $('#overlay').fadeIn();
+            });
+
+            // 关闭弹窗
+            $('.popup-close-service').click(function() {
+                $('.showMobile').fadeOut();
+                // $('#overlay').fadeOut();
+            });
         });
 
  </script>

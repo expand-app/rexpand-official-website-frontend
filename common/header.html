@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
+            .href-active {
+                color: #008A27 !important;
+            }
             .modal-pop {
                 position: fixed;
                 top: 35%;
@@ -112,14 +115,14 @@
                                 <nav id="mobile-menu" style="display: block;">
                                     <ul>
                                         <li onclick="window.open('./index.html', '_self')">
-                                            <a>首页</a>
+                                            <a href="./index.html">首页</a>
                                         </li>
                           
                                         <li onclick="window.open('./events_01.html', '_self')">
-                                            <a>VIP项目</a>   
+                                            <a href="./events_01.html">VIP项目</a>   
                                         </li>
                                         <li>
-                                            <a>背景提升项目</a>
+                                            <a class="li_project">背景提升项目</a>
                                             <ul class="submenu">
                                                 <li onclick="window.open('./project_01.html', '_self')">
                                                     <a>全栈工程师</a>
@@ -133,10 +136,10 @@
                                             </ul>
                                         </li>
                                         <li onclick="window.open('./course_01.html', '_self')">
-                                            <a>成功案例</a>
+                                            <a href="./course_01.html">成功案例</a>
                                         </li>
                                         <li onclick="window.open('./advisors.html', '_self')">
-                                            <a>关于我们</a>
+                                            <a href="./advisors.html">关于我们</a>
                                          </li>
                                     </ul>
                                 </nav>
@@ -184,12 +187,11 @@
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
     <script>
       $(document).ready(function() {
 
             $('#free-materials').click(function() {
-                console.log('1111')
                 // alert('111')
                 $('#myModal').fadeIn();
                 $('#overlay').fadeIn();
@@ -200,6 +202,19 @@
                 $('#myModal').fadeOut();
                 $('#overlay').fadeOut();
             });
+
+             // 获取当前 URL 地址的后缀
+            var url = window.location.pathname;
+            // var extension = url.substr(url.lastIndexOf('.') + 0);
+            var extension = url.substring(url.lastIndexOf("/") + 1);
+            console.log('extension' +extension)
+            // 根据后缀添加高亮效果
+            $('nav ul li a').removeClass('href-active');
+            // 根据后缀添加高亮效果
+            $('nav ul li a[href$="' + extension + '"]').addClass('href-active');
+            if(extension === 'project_01.html' || extension === 'project_02.html' || extension === 'project_03.html') {
+                $('nav ul li .li_project').addClass('href-active');
+            }
         });
     </script>
 </body>
