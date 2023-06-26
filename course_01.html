@@ -112,7 +112,7 @@
             <div class="courses-list">
                 <div class="">
                     <h1 class="mb-20 weight500 text-center">学员offer榜</h1>
-                    <h3 class="mb-90 text-center">恭喜Offer帮学员们斩获金融、咨询、数据等多个领域的Offer。</h3>
+                    <h3 class="mb-90 text-center">恭喜学员们斩获金融、咨询、数据等多个领域的Offer。</h3>
                     <!-- <ul class="tabs">
                         <li class="tab active" data-tab="all">全部</li>
                         <li class="tab" data-tab="tab1">金融/四大</li>
@@ -226,9 +226,9 @@
     <div id="videoModal" class="modal-pop">
         <div class="popup-content">
             <video id="videoPlayer" controls autoplay style="width: 100%;"></video></div>
-          <button class="vidoe-modal-close">
-            <span class="ti-close"></span>
-          </button>
+            <button class="vidoe-modal-close">
+                <span class="ti-close"></span>
+            </button>
         </div>
         <!-- <div class="popup-content">
           <p>弹窗内容</p>
@@ -275,7 +275,7 @@
             img: 'img/icon/logo_img01.png'
         },
         {
-            name: 'Annie',
+            name: 'A同学',
             'school-zh': '伊利诺伊大学芝加哥分校',
             'school-en': 'University of Illinois, Chicago',
             speciality: 'MBA',
@@ -311,7 +311,7 @@
             img: 'img/icon/logo_img05.png'
         },
         {
-            name: 'Qinyun Cai  (Claire)',
+            name: 'Q同学',
             'school-zh': '里海大学',
             'school-en': 'Lehigh University',
             speciality: ' Business Analytics',
@@ -329,7 +329,7 @@
             img: 'img/icon/logo_img07.png'
         },
         {
-            name: 'Nancy',
+            name: 'N同学',
             'school-zh': '约翰霍普金斯大学',
             'school-en': 'Johns Hopkins University',
             speciality: 'Finance',
@@ -356,7 +356,7 @@
             img: 'img/icon/logo_img01.png'
         },
         {
-            name: 'Hongrui  Liu (Frank)',
+            name: 'H同学',
             'school-zh': '圣路易斯华盛顿大学',
             'school-en': 'Washington University (St. Louis)',
             speciality: 'Financial Engineering & Data Science',
@@ -383,7 +383,7 @@
             img: 'img/icon/logo_img04.png'
         },
         {
-            name: 'Jason',
+            name: 'J同学',
             'school-zh': '德克萨斯大学达拉斯分校',
             'school-en': 'University of Texas at Dallas',
             speciality: 'FinaBusiness Analyticsnce',
@@ -392,7 +392,7 @@
             img: 'img/icon/logo_img05.png'
         },
         {
-            name: 'Jessica',
+            name: 'J同学',
             'school-zh': '佛罗里达州立大学',
             'school-en': 'Florida State University',
             speciality: 'Data Science',
@@ -410,7 +410,7 @@
             img: 'img/icon/logo_img07.png'
         },
         {
-            name: 'Jeff',
+            name: 'J同学',
             'school-zh': '加州大学洛杉矶分校',
             'school-en': 'University of California, Los Angeles',
             speciality: 'Financial Mathematics',
@@ -428,7 +428,7 @@
             img: 'img/icon/logo_img09.png'
         },
         {
-            name: 'Jonny',
+            name: 'J同学',
             'school-zh': '南佛罗里达大学',
             'school-en': 'University of South Florida',
             speciality: 'Computer Science',
@@ -446,7 +446,7 @@
             img: 'img/icon/logo_img02.png'
         },
         {
-            name: 'Ronnie',
+            name: 'R同学',
             'school-zh': '伊利诺伊大学香槟分校',
             'school-en': 'University of Illinois at Urbana-Champaign',
             speciality: 'Statistics&Accounting',
@@ -455,7 +455,7 @@
             img: 'img/icon/logo_img03.png'
         },
         {
-            name: 'Yuqin Chen',
+            name: 'Y同学',
             'school-zh': '普渡大学',
             'school-en': 'Purdue University',
             speciality: '',
@@ -464,7 +464,7 @@
             img: 'img/icon/logo_img04.png'
         },
         {
-            name: 'Tianqi',
+            name: 'T同学',
             'school-zh': '南加州大学',
             'school-en': 'University of Southern California',
             speciality: 'Compuer Science',
@@ -500,7 +500,7 @@
             img: 'img/icon/logo_img08.png'
         },
         {
-            name: 'Frank',
+            name: 'F同学',
             'school-zh': '圣路易斯华盛顿大学',
             'school-en': 'Washington University (St. Louis)',
             speciality: 'Data Science',
@@ -509,7 +509,7 @@
             img: 'img/icon/logo_img09.png'
         },
         {
-            name: 'Emily',
+            name: 'E同学',
             'school-zh': '德克萨斯大学奥斯汀分校',
             'school-en': 'University of Texas at Austin',
             speciality: 'Data Science',
@@ -527,7 +527,7 @@
             img: 'img/icon/logo_img02.png'
         },
         {
-            name: 'Ziheng Song   (Teddy)',
+            name: 'Z同学',
             'school-zh': '旧金山大学',
             'school-en': 'University of San Francisco',
             speciality: 'Financial Analysis',
@@ -624,7 +624,7 @@
 
             // 关闭弹窗
             $('.vidoe-modal-close').click(function() {
-
+                $('#videoPlayer').attr('src', '');
                 $('#videoModal').fadeOut();
                 $('#overlay').fadeOut();
             });
