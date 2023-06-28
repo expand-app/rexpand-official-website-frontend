@@ -1327,7 +1327,12 @@
         width: 80%;
         top: 40%;
     }
-
+    .showModalMobile {
+        display: inline-block;
+    }
+    .showModalPc {
+        display: none;
+    }
     .popup {
         /* display: block; */
         width: 80%;

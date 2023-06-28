@@ -1205,7 +1205,7 @@ li.free-material span{
  
 }
 .expertise-area-section ul.label li{
-    background: #D1FAE5;
+    background: #F4FAF7;
     border-radius: 9999px;
     font-size: 14px;
     line-height: 20px;
@@ -1215,7 +1215,7 @@ li.free-material span{
 /* identical to box height */
 
 
-color: #008A27;
+color: #838383;
 }
 .expertise-area-section .icon{
     font-size: 60px;
@@ -1384,7 +1384,7 @@ color: #008A27;
     position: relative;
 }
 .courses-thumb img {
-    width: 50%;
+    width: 80%;
 
     position: absolute;
     left: 50%;
@@ -3968,6 +3968,9 @@ span.opening-date {
 .showMobile {
     display: none;
 }
+.showModalMobile {
+    display: none;
+}
 .footer-btn {
     display: none;
     position: fixed;
@@ -3991,6 +3994,9 @@ span.opening-date {
     line-height: 35px;
     padding: 0 10px;
     color: #008A27;
+}
+.cursor {
+    cursor: pointer;
 }
 /* 当屏幕高度小于等于600px时应用样式 */
 @media (max-width: 450px) {
