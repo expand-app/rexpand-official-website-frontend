@@ -74,6 +74,38 @@
             color:#fff;
             cursor: pointer;
         }
+        .overlayVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0);
+            z-index: 9998;
+            display: none;
+            pointer-events: auto; /* 禁用背景区域的点击 */
+            overflow: hidden; /* 禁用背景区域的滚动 */
+        }
+        .modal-app-video{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 9999;
+            /* width: 500px;
+            height: 360px; */
+            height: calc(100vh - 40px);
+            width: calc(100vw - 40px);
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 40px);
+            width: calc(100vw - 40px);  */
+        }
+
     </style>
 </head>
 
@@ -94,10 +126,10 @@
                     <div class="row">
                         <div class="col-xl-8 offset-xl-2">
                             <div class="slider-content text-center">
-                                <h1 class="white-color f-700 mb-40" data-animation="fadeInUp" data-delay=".2s">看Emily如何斩获<br/>JPMorgan DS Offer</h3>
+                                <h1 class="white-color f-700 mb-40" data-animation="fadeInUp" data-delay=".2s">看Claire如何斩获<br/>上市公司FA offer</h3>
                                 <!-- <p data-animation="fadeInUp" data-delay=".4s">从会计转CS，我用10个月的时间成为了一个solid的软件工程师，并拿到了Zillow的offer。感谢来Offer帮助我系统提高CS能力，指引我保持在正确的学习和准备的道路上，并且鼓励我坚持下来。坚持下来，因为当胜利的曙光洒在你脸上，你才会明白，所有的努力，都因这一刻而闪闪发光。</p>
                                 <button class="btn yellow-bg-btn" data-animation="fadeInUp" data-delay=".6s">免费试听</button> -->
-                                <button class="btn yellow-bg-btn" data-animation="fadeInUp" data-delay=".6s">点击查看</button>
+                                <button class="btn yellow-bg-btn video-btn" data-animation="fadeInUp" data-delay=".6s">点击查看</button>
                             </div>
                         </div>
                     </div>
@@ -223,7 +255,7 @@
     <div id="footer">
 
     </div>
-    <div id="videoModal" class="modal-pop">
+    <div id="videoModal" class="modal-app-video">
         <div class="popup-content">
             <video id="videoPlayer" controls autoplay style="width: 100%;"></video></div>
             <button class="vidoe-modal-close">
@@ -234,7 +266,7 @@
           <p>弹窗内容</p>
         </div> -->
      </div>
-     <div id="overlay" class="overlay"></div>
+     <div id="overlayVideo" class="overlayVideo"></div>
     <!-- footer end -->
 
 
@@ -398,7 +430,7 @@
             speciality: 'Data Science',
             company: '7-Eleven',
             position: 'Data Analyst',
-            img: 'img/studentComp/McKinsey_img.png'
+            img: 'img/studentComp/7-Eleven_img.png'
         },
         {
             name: 'C同学',
@@ -542,7 +574,7 @@
             speciality: 'Financial Analysis',
             company: 'Segway- Accountant   New York Life',
             position: 'Insurance-Financial advisor',
-            img: 'img/icon/logo_img03.png'
+            img: 'img/studentComp/Segway- Accountant New York Life_img.png'
         }
     ];
 
@@ -619,7 +651,13 @@
                 // 添加选中样式到当前选项卡按钮
                 $(this).addClass('active');
             });
-
+            $('.video-btn').click(function(e) {
+                e.preventDefault();
+                 // 设置视频源
+                $('#videoPlayer').attr('src', 'img/courses/movie.mov');
+                $('#videoModal').fadeIn();
+                $('#overlayVideo').fadeIn();
+            });
                 // 默认展示全部内容
             $('[data-tab="all"]').click();
             $('.video-play-btn').click(function(e) {
@@ -628,14 +666,14 @@
                 var videoUrl = $(this).data('video');
                 $('#videoPlayer').attr('src', videoUrl);
                 $('#videoModal').fadeIn();
-                $('#overlay').fadeIn();
+                $('#overlayVideo').fadeIn();
             });
 
             // 关闭弹窗
             $('.vidoe-modal-close').click(function() {
                 $('#videoPlayer').attr('src', '');
                 $('#videoModal').fadeOut();
-                $('#overlay').fadeOut();
+                $('#overlayVideo').fadeOut();
             });
 
             // 翻页
