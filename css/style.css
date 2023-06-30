@@ -3998,6 +3998,13 @@ span.opening-date {
 .cursor {
     cursor: pointer;
 }
+.videoBanner {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 70%;
+    z-index: 99999;
+}
 /* 当屏幕高度小于等于600px时应用样式 */
 @media (max-width: 450px) {
     /* 样式 */
