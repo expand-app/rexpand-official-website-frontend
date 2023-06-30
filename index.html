@@ -628,7 +628,7 @@
             // 获取视频标签和页面展示区域
             var video = $('#video');
             var viewport = $(window);
-
+            video.get(0).pause();
             // 监听页面滚动事件
             viewport.on('scroll', function() {
                 // 计算视频标签的位置信息
