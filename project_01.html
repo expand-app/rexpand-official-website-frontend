@@ -1,219 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Rexpand</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/meanmenu.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/meanmenu.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <style>
-        .project-tabs {
-            flex: 0 0 200px;
-            padding-left:0px !important;
-            padding-right:30px !important;
-            color: #838383;
-            border-right: 2px solid #fff;
-            height: 470px;
-        }
+      .project-tabs {
+        flex: 0 0 200px;
+        padding-left: 0px !important;
+        padding-right: 30px !important;
+        color: #838383;
+        border-right: 2px solid #fff;
+        height: 470px;
+      }
 
-        .project-tab {
-            padding: 10px;
-            padding-left: 60px;
-            cursor: pointer;
-            position: relative;
-    
-        }
+      .project-tab {
+        padding: 10px;
+        padding-left: 60px;
+        cursor: pointer;
+        position: relative;
+      }
 
-        .project-tab.active {
-            /* border-left: 3px solid #008A27; */
-            background: rgba(0, 138, 39, 0.1);
-            color:#008A27
-        }
+      .project-tab.active {
+        /* border-left: 3px solid #008A27; */
+        background: rgba(0, 138, 39, 0.1);
+        color: #008a27;
+      }
 
-        .project-tab.active::before {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            top: 0px;
-            left: -2px;
-            /* transform: translateX(-50%); */
-            padding: 2px;
-            height: 44px;
-            background-color: #008A27;
-            /* color: #333; */
-            }
-        .project-content {
-            flex: 1;
-            padding: 10px 30px !important;
-        }
+      .project-tab.active::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: -2px;
+        /* transform: translateX(-50%); */
+        padding: 2px;
+        height: 44px;
+        background-color: #008a27;
+        /* color: #333; */
+      }
+      .project-content {
+        flex: 1;
+        padding: 10px 30px !important;
+      }
 
-        .tab-content {
-            display: none;
-            position: relative;
-        }
-        .project-time {
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-        .project-time span:first-child{
-            padding: 10px;
-            border: 1px solid #008A27;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-        .project-time span:last-child{
-            padding: 10px 20px;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-            border: 1px solid #008A27;
-            margin-left: -5px;
+      .tab-content {
+        display: none;
+        position: relative;
+      }
+      .project-time {
+        position: absolute;
+        right: 0px;
+        top: -40px;
+      }
+      .project-time span:first-child {
+        padding: 10px;
+        border: 1px solid #008a27;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      .project-time span:last-child {
+        padding: 10px 20px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: 1px solid #008a27;
+        margin-left: -5px;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .question-container {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0px;
+        margin-bottom: 30px;
+      }
+      .question-title {
+        line-height: 34px;
+        color: #1b1b1b;
+        cursor: pointer;
+        margin-left: 20px;
+      }
 
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .question-container{
-            background: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 20px 0px;
-            margin-bottom: 30px;
-        }
-        .question-title {
-            line-height: 34px;
-            color: #1B1B1B;
-            cursor: pointer;
-            margin-left: 20px;
-        }
+      .question-content {
+        display: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #838383;
+        margin-left: 20px;
+        /* padding: 10px; */
+      }
 
-        .question-content {
-            display: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            color: #838383;
-            margin-left: 20px;
-            /* padding: 10px; */
-        }
+      #timeline-container {
+        position: relative;
+      }
 
-        #timeline-container {
-            position: relative;
-        }
+      .timeline-event {
+        position: relative;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        /* border-left: 2px solid #ccc; */
+      }
 
-        .timeline-event {
-            position: relative;
-            padding: 0px 20px;
-            margin-bottom: 20px;
-            /* border-left: 2px solid #ccc; */
-        }
+      .event-date {
+        /* font-weight: bold; */
+        font-size: 20px;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .event-date::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: -24px;
+        /* transform: translateX(-50%); */
+        padding: 2px;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        border: 2px solid #008a27;
+      }
 
-        .event-date {
-            /* font-weight: bold; */
-            font-size: 20px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        .event-date::before{
-            content: '';
-            display: inline-block;
-            position: absolute;
-            top: 10px;
-            left: -24px;
-            /* transform: translateX(-50%); */
-            padding: 2px;
-            height: 5px;
-            width: 5px;
-            border-radius: 50%;
-            border: 2px solid #008A27;
-        }
+      .event-content {
+        margin-left: 20px;
+        position: relative;
+      }
+      .event-content::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -12px;
+        left: -42px;
+        /* transform: translateX(-50%); */
+        /* padding: px; */
+        height: 110%;
+        /* width: px; */
+        /* border-radius: 50%; */
+        border: 1px solid #ccc;
+      }
+      .event-content li {
+        list-style: disc;
+        padding: 10px 0px;
+      }
 
-            .event-content {
-                margin-left: 20px;
-                position: relative;
-            }
-            .event-content::before{
-            content: '';
-            display: inline-block;
-            position: absolute;
-            top: -12px;
-            left: -42px;
-            /* transform: translateX(-50%); */
-            /* padding: px; */
-            height: 110%;
-            /* width: px; */
-            /* border-radius: 50%; */
-            border: 1px solid #ccc;
-            }
-            .event-content li{
-                list-style: disc;
-                padding: 10px 0px;
-            }
-
-        .question-container-mobile {
-            background: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 20px 0px;
-            margin-bottom: 30px;
-        }
-        .question-title {
-            line-height: 34px;
-            color: #1B1B1B;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-        .question-title-mobile {
-            line-height: 34px;
-            color: #1B1B1B;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-        .question-content {
-            display: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            color: #838383;
-            margin-left: 20px;
-            /* padding: 10px; */
-        }
-        .question-content-mobile {
-            display: none;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            color: #838383;
-            margin-left: 20px;
-            /* padding: 10px; */
-        }
+      .question-container-mobile {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0px;
+        margin-bottom: 30px;
+      }
+      .question-title {
+        line-height: 34px;
+        color: #1b1b1b;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+      .question-title-mobile {
+        line-height: 34px;
+        color: #1b1b1b;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+      .question-content {
+        display: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #838383;
+        margin-left: 20px;
+        /* padding: 10px; */
+      }
+      .question-content-mobile {
+        display: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #838383;
+        margin-left: 20px;
+        /* padding: 10px; */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
     <!-- Add your site or application content here -->
     <!-- header-start -->
@@ -221,590 +222,618 @@
     <!-- header-end -->
     <!-- slider-start -->
     <div class="slider-area">
-        <div class="pages-title">
-            <div class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center" style="background-image: url(img/slider/project1_banner.png);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8 offset-xl-2">
-                            <div class="slider-content text-center">
-                                <!-- <h5 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">一飞冲天</h5> -->
-                                <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">全栈工程师项目</h1>
-                                <h2 data-animation="fadeInUp" data-delay=".4s" class="white-color mb-30 mt-30">FULL STACK ENGINEER                                </h2>
-                                <!-- <button class="btn yellow-bg-btn" id="open-popup" data-animation="fadeInUp" data-delay=".6s">扫码添加导师                                 </button> -->
-                                <!-- <button class="btn yellow-bg-btn ml-25" data-animation="fadeInUp" data-delay=".6s">海外求职渠道</button> -->
-                            </div>
-                        </div>
-                    </div>
+      <div class="pages-title">
+        <div
+          class="single-slider slider-height slider-height-breadcrumb d-flex align-items-center"
+          style="background-image: url(img/slider/project1_banner.png)"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-8 offset-xl-2">
+                <div class="slider-content text-center">
+                  <!-- <h5 class="white-color f-700" data-animation="fadeInUp" data-delay=".2s">一飞冲天</h5> -->
+                  <h1
+                    class="white-color f-700"
+                    data-animation="fadeInUp"
+                    data-delay=".2s"
+                  >
+                    全栈工程师项目
+                  </h1>
+                  <h2
+                    data-animation="fadeInUp"
+                    data-delay=".4s"
+                    class="white-color mb-30 mt-30"
+                  >
+                    FULL STACK ENGINEER
+                  </h2>
+                  <!-- <button class="btn yellow-bg-btn" id="open-popup" data-animation="fadeInUp" data-delay=".6s">扫码添加导师                                 </button> -->
+                  <!-- <button class="btn yellow-bg-btn ml-25" data-animation="fadeInUp" data-delay=".6s">海外求职渠道</button> -->
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- slider-end -->
     <div class="enhancementProject-area gray-bg pt-120 pb-120">
-        <div class="container">
-            <div class="col-xl-8 offset-xl-2 mb-60">
-                <h1 class="mb-20 weight500 text-center">项目介绍</h1>
-                <h3 class="mb-20 text-center color61 lh36">
-                    本次项目将开发一款类似于抖音/小红书的短视频全栈 App(iOS & Android)， 
-                    帮助学生熟悉互联网产品的全程开发， 包括前端以及 后端开发， 以及项目上线， 
-                    对求职软件工程师和全栈工程师都有极强的背景补充和技能提升作用。
-                </h3>
-                <div class="project-container mb-90">
-                    <ul class="label">
-                        <li>React Native</li>
-                        <li>Typescript</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>MongoDB</li>
-                        <li>Mongoose</li>
-                        <li>JWT</li>
-                        <li>AWS S3</li>
-                        <li>AWS Elastic Beanstalk</li>
-                        <li>AWS Cognito</li>
-                        <li>Apifox</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row col-xl-12">
-                <div class="card bg-white mb-20">
-                    <h3 class="weight500 lh36">适合学员</h3>
-                    <h4 class="color61">对 Javascript 有基本了解， 适合 CS 科班出身以及希望转行 CS 并就业 SDE 的同学</h4>
-                </div>
-                <div class="card bg-white mb-20">
-                    <h3 class="weight500 lh36">项目跨度以及时长</h3>
-                    <h4 class="color61">4 个月 | 40 小时： 后端 20 hours + 前端 20 hours</h4>
-                </div>
-                <div class="card bg-white mb-20">
-                    <h3 class="weight500 lh36">授课方式</h3>
-                    <h4 class="color61">理论知识 + 项目设计开发 + 独立编码 + office hour + 导师评估</h4>
-                </div>
-            </div>
+      <div class="container">
+        <div class="col-xl-8 offset-xl-2 mb-60">
+          <h1 class="mb-20 weight500 text-center">项目介绍</h1>
+          <h3 class="mb-20 text-center color61 lh36">
+            本次项目将开发一款类似于抖音/小红书的短视频全栈 App(iOS & Android)，
+            帮助学生熟悉互联网产品的全程开发， 包括前端以及 后端开发，
+            以及项目上线，
+            对求职软件工程师和全栈工程师都有极强的背景补充和技能提升作用。
+          </h3>
+          <div class="project-container mb-90">
+            <ul class="label">
+              <li>React Native</li>
+              <li>Typescript</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+              <li>Mongoose</li>
+              <li>JWT</li>
+              <li>AWS S3</li>
+              <li>AWS Elastic Beanstalk</li>
+              <li>AWS Cognito</li>
+              <li>Apifox</li>
+            </ul>
+          </div>
         </div>
+        <div class="row col-xl-12">
+          <div class="card bg-white mb-20">
+            <h3 class="weight500 lh36">适合学员</h3>
+            <h4 class="color61">
+              对 Javascript 有基本了解， 适合 CS 科班出身以及希望转行 CS 并就业
+              SDE 的同学
+            </h4>
+          </div>
+          <div class="card bg-white mb-20">
+            <h3 class="weight500 lh36">项目跨度以及时长</h3>
+            <h4 class="color61">
+              4 个月 | 40 小时： 后端 20 hours + 前端 20 hours
+            </h4>
+          </div>
+          <div class="card bg-white mb-20">
+            <h3 class="weight500 lh36">授课方式</h3>
+            <h4 class="color61">
+              理论知识 + 项目设计开发 + 独立编码 + office hour + 导师评估
+            </h4>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- testimonials start -->
-    <div class="course-outline pt-120 pd-120 ">
-        <div class="container">
-            <h1 class="mb-90 weight500 text-center">课程大纲</h1>
-            <!-- <h3 class="mb-50 text-center pb-20 white-color">德勤审计所有资料，保证所有Offer真实性</h3> -->
-            <div class="">
-                <div class="container course-outline-area">
-                    <div class="project-tabs col-xl-3 pt-50">
-                      <div class="project-tab active" data-tab="tab1">第一个月</div>
-                      <div class="project-tab" data-tab="tab2">第二个月</div>
-                      <div class="project-tab" data-tab="tab3">第三个月</div>
-                      <div class="project-tab" data-tab="tab4">第四个月</div>
-                      <!-- <div class="project-tab" data-tab="tab5">日志</div> -->
-                    </div>
-                    <div class="course-outline-content col-xl-8 pt-50">
-                        <div id="tab1" class="tab-content active">
-                            <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                            <div id="timeline-container">
-                                <div class="timeline-event">
-                                  <div class="event-date theme-color">第一节</div>
-                                  <ul class="event-content color83" >
-                                    <li>Background</li>
-                                    <li>Project Introduction</li>
-                                  </ul>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="event-date theme-color">第二节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Express.js</li>
-                                      <li>MoongoDB Basics</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第三节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第四节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Backend Design</li>
-                                      <li>Setup Dev Envoirment</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第五节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Working with Restful API</li>
-                                      <!-- <li>Setup Dev Envoirment</li> -->
-                                    </ul>
-                                  </div>
-                                <!-- 添加更多事件 -->
-                              </div>
-                        </div>
-                        <div id="tab2" class="tab-content">
-                            <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                            <div id="timeline-container">
-                                <div class="timeline-event">
-                                  <div class="event-date theme-color">第六节</div>
-                                  <ul class="event-content color83" >
-                                    <li>JWT</li>
-                                    <li>Authentication</li>
-                                  </ul>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="event-date theme-color">第七节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第八节</div>
-                                    <ul class="event-content color83" >
-                                        <li>User APIs</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第九节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Videos APIs</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十一节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十二节</div>
-                                    <ul class="event-content color83" >
-                                      <li>AWS Basics</li>
-                                      <li>Deploy Backend to AWS</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十三节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                <!-- 添加更多事件 -->
-                              </div>
-                        </div>
-                        <div id="tab3" class="tab-content">
-                            <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                            <div id="timeline-container">
-                                <div class="timeline-event">
-                                  <div class="event-date theme-color">第十四节</div>
-                                  <ul class="event-content color83" >
-                                    <li>Introduction to React Native</li>
-                                    <li>TS</li>
-                                  </ul>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="event-date theme-color">第十五节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十六节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Frontend Design</li>
-                                        <li>Setup Dev Environment (iOS & Android)</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十七节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十八节</div>
-                                    <ul class="event-content color83" >
-                                      <li>App Skeleton Impmentation</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十九节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十节</div>
-                                    <ul class="event-content color83" >
-                                      <li>User Sign in/up I</li>
-                                      <!-- <li>Deploy Backend to AWS</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十一节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十二节</div>
-                                    <ul class="event-content color83" >
-                                        <li>User Sign in/up I</li>
-                                    </ul>
-                                  </div>
-                                <!-- 添加更多事件 -->
-                              </div>
-                        </div>
-                        <div id="tab4" class="tab-content">
-                            <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                            <div id="timeline-container">
-                                <div class="timeline-event">
-                                  <div class="event-date theme-color">第二十三节</div>
-                                  <ul class="event-content color83" >
-                                    <li>Office Hour</li>
-                                  </ul>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十四节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Me Screen</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十五节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十六节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Feed Screen</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十七节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十八节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Video Upload</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十九节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第三十节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Project Summary</li>
-                                    </ul>
-                                  </div>
-                                <!-- 添加更多事件 -->
-                              </div>
-                        </div>
-                    </div>
-                  </div>
-                  
+    <div class="course-outline pt-120 pd-120">
+      <div class="container">
+        <h1 class="mb-90 weight500 text-center">课程大纲</h1>
+        <!-- <h3 class="mb-50 text-center pb-20 white-color">德勤审计所有资料，保证所有Offer真实性</h3> -->
+        <div class="">
+          <div class="container course-outline-area">
+            <div class="project-tabs col-xl-3 pt-50">
+              <div class="project-tab active" data-tab="tab1">第一个月</div>
+              <div class="project-tab" data-tab="tab2">第二个月</div>
+              <div class="project-tab" data-tab="tab3">第三个月</div>
+              <div class="project-tab" data-tab="tab4">第四个月</div>
+              <!-- <div class="project-tab" data-tab="tab5">日志</div> -->
             </div>
+            <div class="course-outline-content col-xl-8 pt-50">
+              <div id="tab1" class="tab-content active">
+                <h3 class="weight500 lh36">课程排期</h3>
+                <h4 class="color83 mb-50">
+                  4个月，共30节课，直播课程+录播课程+项目实战
+                </h4>
+                <div id="timeline-container">
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第一节</div>
+                    <ul class="event-content color83">
+                      <li>Background</li>
+                      <li>Project Introduction</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二节</div>
+                    <ul class="event-content color83">
+                      <li>Express.js</li>
+                      <li>MoongoDB Basics</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第三节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第四节</div>
+                    <ul class="event-content color83">
+                      <li>Backend Design</li>
+                      <li>Setup Dev Envoirment</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第五节</div>
+                    <ul class="event-content color83">
+                      <li>Working with Restful API</li>
+                      <!-- <li>Setup Dev Envoirment</li> -->
+                    </ul>
+                  </div>
+                  <!-- 添加更多事件 -->
+                </div>
+              </div>
+              <div id="tab2" class="tab-content">
+                <h3 class="weight500 lh36">课程排期</h3>
+                <h4 class="color83 mb-50">
+                  4个月，共30节课，直播课程+录播课程+项目实战
+                </h4>
+                <div id="timeline-container">
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第六节</div>
+                    <ul class="event-content color83">
+                      <li>JWT</li>
+                      <li>Authentication</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第七节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第八节</div>
+                    <ul class="event-content color83">
+                      <li>User APIs</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第九节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十节</div>
+                    <ul class="event-content color83">
+                      <li>Videos APIs</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十一节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十二节</div>
+                    <ul class="event-content color83">
+                      <li>AWS Basics</li>
+                      <li>Deploy Backend to AWS</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十三节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <!-- 添加更多事件 -->
+                </div>
+              </div>
+              <div id="tab3" class="tab-content">
+                <h3 class="weight500 lh36">课程排期</h3>
+                <h4 class="color83 mb-50">
+                  4个月，共30节课，直播课程+录播课程+项目实战
+                </h4>
+                <div id="timeline-container">
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十四节</div>
+                    <ul class="event-content color83">
+                      <li>Introduction to React Native</li>
+                      <li>TS</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十五节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十六节</div>
+                    <ul class="event-content color83">
+                      <li>Frontend Design</li>
+                      <li>Setup Dev Environment (iOS & Android)</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十七节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十八节</div>
+                    <ul class="event-content color83">
+                      <li>App Skeleton Impmentation</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第十九节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十节</div>
+                    <ul class="event-content color83">
+                      <li>User Sign in/up I</li>
+                      <!-- <li>Deploy Backend to AWS</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十一节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十二节</div>
+                    <ul class="event-content color83">
+                      <li>User Sign in/up I</li>
+                    </ul>
+                  </div>
+                  <!-- 添加更多事件 -->
+                </div>
+              </div>
+              <div id="tab4" class="tab-content">
+                <h3 class="weight500 lh36">课程排期</h3>
+                <h4 class="color83 mb-50">
+                  4个月，共30节课，直播课程+录播课程+项目实战
+                </h4>
+                <div id="timeline-container">
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十三节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十四节</div>
+                    <ul class="event-content color83">
+                      <li>Me Screen</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十五节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十六节</div>
+                    <ul class="event-content color83">
+                      <li>Feed Screen</li>
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十七节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十八节</div>
+                    <ul class="event-content color83">
+                      <li>Video Upload</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第二十九节</div>
+                    <ul class="event-content color83">
+                      <li>Office Hour</li>
+                      <!-- <li>Project Introduction</li> -->
+                    </ul>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="event-date theme-color">第三十节</div>
+                    <ul class="event-content color83">
+                      <li>Project Summary</li>
+                    </ul>
+                  </div>
+                  <!-- 添加更多事件 -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- testimonials end -->
     <div class="question-area-mobile gray-bg pt-120 pb-120 col-xl-12">
-        <div class="container">
-            <h1 class="weight500 text-center mb-90">课程大纲</h1>
-            <div class="row"> 
-                <div class="project-content-mobile">
-                    <div class="question-container-mobile">
-                        <h3 class="question-title">
-                            第一个月
-                        </h3>
-                        <div class="course-outline-content">
-                            <div class="question-content-mobile tab-content">
-                                <h3 class="weight500 lh36">课程排期</h3>
-                                <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                                <div id="timeline-container">
-                                    <div class="timeline-event">
-                                    <div class="event-date theme-color">第一节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Background</li>
-                                        <li>Project Introduction</li>
-                                    </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第二节</div>
-                                        <ul class="event-content color83" >
-                                        <li>Express.js</li>
-                                        <li>MoongoDB Basics</li>
-                                        </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第三节</div>
-                                        <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                        <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第四节</div>
-                                        <ul class="event-content color83" >
-                                        <li>Backend Design</li>
-                                        <li>Setup Dev Envoirment</li>
-                                        </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第五节</div>
-                                        <ul class="event-content color83" >
-                                        <li>Working with Restful API</li>
-                                        <!-- <li>Setup Dev Envoirment</li> -->
-                                        </ul>
-                                    </div>
-                                    <!-- 添加更多事件 -->
-                                </div>
-                            </div>
-                        </div>
+      <div class="container">
+        <h1 class="weight500 text-center mb-90">课程大纲</h1>
+        <div class="row">
+          <div class="project-content-mobile">
+            <div class="question-container-mobile">
+              <h3 class="question-title">第一个月</h3>
+              <div class="course-outline-content">
+                <div class="question-content-mobile tab-content">
+                  <h3 class="weight500 lh36">课程排期</h3>
+                  <h4 class="color83 mb-50">
+                    4个月，共30节课，直播课程+录播课程+项目实战
+                  </h4>
+                  <div id="timeline-container">
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第一节</div>
+                      <ul class="event-content color83">
+                        <li>Background</li>
+                        <li>Project Introduction</li>
+                      </ul>
                     </div>
-                    <div class="question-container-mobile">
-                        <h3 class="question-title-mobile">
-                            第二个月
-                        </h3>
-                        <div class="course-outline-content">
-                            <div class="question-content-mobile tab-content">
-                                <h3 class="weight500 lh36">课程排期</h3>
-                                <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                                <div id="timeline-container">
-                                    <div class="timeline-event">
-                                      <div class="event-date theme-color">第六节</div>
-                                      <ul class="event-content color83" >
-                                        <li>JWT</li>
-                                        <li>Authentication</li>
-                                      </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第七节</div>
-                                        <ul class="event-content color83" >
-                                            <li>Office Hour</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第八节</div>
-                                        <ul class="event-content color83" >
-                                            <li>User APIs</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第九节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Office Hour</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第十节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Videos APIs</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第十一节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Office Hour</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第十二节</div>
-                                        <ul class="event-content color83" >
-                                          <li>AWS Basics</li>
-                                          <li>Deploy Backend to AWS</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第十三节</div>
-                                        <ul class="event-content color83" >
-                                            <li>Office Hour</li>
-                                        </ul>
-                                      </div>
-                                    <!-- 添加更多事件 -->
-                                  </div>
-                            </div>
-                        </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二节</div>
+                      <ul class="event-content color83">
+                        <li>Express.js</li>
+                        <li>MoongoDB Basics</li>
+                      </ul>
                     </div>
-                    <div class="question-container-mobile">
-                        <h3 class="question-title-mobile">
-                            第三个月
-                        </h3>
-                        <div class="course-outline-content">
-                        <div class="question-content-mobile tab-content">
-                            <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                            <div id="timeline-container">
-                                <div class="timeline-event">
-                                  <div class="event-date theme-color">第十四节</div>
-                                  <ul class="event-content color83" >
-                                    <li>Introduction to React Native</li>
-                                    <li>TS</li>
-                                  </ul>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="event-date theme-color">第十五节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十六节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Frontend Design</li>
-                                        <li>Setup Dev Environment (iOS & Android)</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十七节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十八节</div>
-                                    <ul class="event-content color83" >
-                                      <li>App Skeleton Impmentation</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十九节</div>
-                                    <ul class="event-content color83" >
-                                      <li>Office Hour</li>
-                                      <!-- <li>Project Introduction</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十节</div>
-                                    <ul class="event-content color83" >
-                                      <li>User Sign in/up I</li>
-                                      <!-- <li>Deploy Backend to AWS</li> -->
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十一节</div>
-                                    <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第二十二节</div>
-                                    <ul class="event-content color83" >
-                                        <li>User Sign in/up I</li>
-                                    </ul>
-                                  </div>
-                                <!-- 添加更多事件 -->
-                              </div>
-                        </div>
-                        </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第三节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
                     </div>
-                    <div class="question-container-mobile">
-                        <h3 class="question-title-mobile">
-                            第四个月
-                        </h3>
-                        <div class="course-outline-content">
-                            <div class="question-content-mobile tab-content">
-                                <h3 class="weight500 lh36">课程排期</h3>
-                                <h4 class="color83 mb-50">4个月，共30节课，直播课程+录播课程+项目实战</h4>
-                                <div id="timeline-container">
-                                    <div class="timeline-event">
-                                      <div class="event-date theme-color">第二十三节</div>
-                                      <ul class="event-content color83" >
-                                        <li>Office Hour</li>
-                                      </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十四节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Me Screen</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十五节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Office Hour</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十六节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Feed Screen</li>
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十七节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Office Hour</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十八节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Video Upload</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第二十九节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Office Hour</li>
-                                          <!-- <li>Project Introduction</li> -->
-                                        </ul>
-                                      </div>
-                                      <div class="timeline-event">
-                                        <div class="event-date theme-color">第三十节</div>
-                                        <ul class="event-content color83" >
-                                          <li>Project Summary</li>
-                                        </ul>
-                                      </div>
-                                    <!-- 添加更多事件 -->
-                                  </div>
-                            </div>
-                        </div>
-
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第四节</div>
+                      <ul class="event-content color83">
+                        <li>Backend Design</li>
+                        <li>Setup Dev Envoirment</li>
+                      </ul>
                     </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第五节</div>
+                      <ul class="event-content color83">
+                        <li>Working with Restful API</li>
+                        <!-- <li>Setup Dev Envoirment</li> -->
+                      </ul>
+                    </div>
+                    <!-- 添加更多事件 -->
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="question-container-mobile">
+              <h3 class="question-title-mobile">第二个月</h3>
+              <div class="course-outline-content">
+                <div class="question-content-mobile tab-content">
+                  <h3 class="weight500 lh36">课程排期</h3>
+                  <h4 class="color83 mb-50">
+                    4个月，共30节课，直播课程+录播课程+项目实战
+                  </h4>
+                  <div id="timeline-container">
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第六节</div>
+                      <ul class="event-content color83">
+                        <li>JWT</li>
+                        <li>Authentication</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第七节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第八节</div>
+                      <ul class="event-content color83">
+                        <li>User APIs</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第九节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十节</div>
+                      <ul class="event-content color83">
+                        <li>Videos APIs</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十一节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十二节</div>
+                      <ul class="event-content color83">
+                        <li>AWS Basics</li>
+                        <li>Deploy Backend to AWS</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十三节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <!-- 添加更多事件 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="question-container-mobile">
+              <h3 class="question-title-mobile">第三个月</h3>
+              <div class="course-outline-content">
+                <div class="question-content-mobile tab-content">
+                  <h3 class="weight500 lh36">课程排期</h3>
+                  <h4 class="color83 mb-50">
+                    4个月，共30节课，直播课程+录播课程+项目实战
+                  </h4>
+                  <div id="timeline-container">
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十四节</div>
+                      <ul class="event-content color83">
+                        <li>Introduction to React Native</li>
+                        <li>TS</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十五节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十六节</div>
+                      <ul class="event-content color83">
+                        <li>Frontend Design</li>
+                        <li>Setup Dev Environment (iOS & Android)</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十七节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十八节</div>
+                      <ul class="event-content color83">
+                        <li>App Skeleton Impmentation</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第十九节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十节</div>
+                      <ul class="event-content color83">
+                        <li>User Sign in/up I</li>
+                        <!-- <li>Deploy Backend to AWS</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十一节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十二节</div>
+                      <ul class="event-content color83">
+                        <li>User Sign in/up I</li>
+                      </ul>
+                    </div>
+                    <!-- 添加更多事件 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="question-container-mobile">
+              <h3 class="question-title-mobile">第四个月</h3>
+              <div class="course-outline-content">
+                <div class="question-content-mobile tab-content">
+                  <h3 class="weight500 lh36">课程排期</h3>
+                  <h4 class="color83 mb-50">
+                    4个月，共30节课，直播课程+录播课程+项目实战
+                  </h4>
+                  <div id="timeline-container">
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十三节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十四节</div>
+                      <ul class="event-content color83">
+                        <li>Me Screen</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十五节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十六节</div>
+                      <ul class="event-content color83">
+                        <li>Feed Screen</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十七节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十八节</div>
+                      <ul class="event-content color83">
+                        <li>Video Upload</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第二十九节</div>
+                      <ul class="event-content color83">
+                        <li>Office Hour</li>
+                        <!-- <li>Project Introduction</li> -->
+                      </ul>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="event-date theme-color">第三十节</div>
+                      <ul class="event-content color83">
+                        <li>Project Summary</li>
+                      </ul>
+                    </div>
+                    <!-- 添加更多事件 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- courses start -->
     <!-- courses end -->
     <!-- brand start -->
     <div class="question-area gray-bg pt-120 pb-120">
-        <div class="container">
-            <h1 class="mb-90 weight500 text-center">常见问题</h1>
-            <div class="row">
-               
-                <div class="col-xl-12" id="faq-container">
-                    <!-- <div class="question-container mb-20">
+      <div class="container">
+        <h1 class="mb-90 weight500 text-center">常见问题</h1>
+        <div class="row">
+          <div class="col-xl-12" id="faq-container">
+            <!-- <div class="question-container mb-20">
                         <h3 class="question-title">Title 1</h3>
                         <div class="question-content">Content 1</div>
                     </div>
@@ -816,17 +845,14 @@
                         <h3 class="question-title">Title 3</h3>
                         <div class="question-content">Content 3</div>
                     </div> -->
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- brand end -->
     <!-- subscribe start -->
     <!-- subscribe end -->
-    <div id="footer">
-
-    </div>
-
+    <div id="footer"></div>
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -850,165 +876,175 @@
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+      // 加载底部
+      $(document).ready(function () {
+        var faqData = [
+          {
+            question: "上课的模式是什么？",
+            answer:
+              "课程采取直播加录播的形式，链接会发在班级群里。所有报名学员均会在班级群里，项目会配备一个班主任老师，会负责群内作业收发以及各项事务的通知。 ",
+          },
+          {
+            question: "背景提升项目和学校上课项目区别是什么？",
+            answer:
+              "项目会以Corporate Level的企业咨询项目为主体，遵循工业界项目的进行流程，项目会以咨询公司工作经验的形式展现在简历上，补充同学简历经验不足这一最大求职短板。",
+          },
+          {
+            question:
+              "适合什么水平的同学，需要具备什么样的技能为条件？跟不上项目怎么办？ ",
+            answer:
+              "0基础可学，课程分为基础理论和项目实操两个大的板块，不需要项目同学有预备知识。项目老师有固定的答疑时间（Office Hour），有项目相关问题可集中提问。",
+          },
+          {
+            question: "课程一周几次？一次课多久？ ",
+            answer:
+              "直播课每日晚上时间，录播课也是在相应时间放出视频 ，项目正式开始后，每周会有答疑课（Office Hour）。 ",
+          },
+          {
+            question: "如果没有赶上直播课怎么办？ ",
+            answer:
+              "所有课程我们都会提供录播视频，班主任老师会即时更新到班级社群。 ",
+          },
+          {
+            question: "项目中遇到问题找谁？",
+            answer:
+              "班主任老师在项目群里会负责关于听课、学习材料发送、视频播放等问题的处理。 ",
+          },
+          {
+            question: "录播课程的有效期是多长？ ",
+            answer:
+              "有效期为课程结束后三个月，即在直播结束三个月内可继续观看录播视频。",
+          },
+          {
+            question: "课程在什么平台？课程里的学习资料以什么形式分享？ ",
+            answer:
+              "直播课程会通过线上授课软件进行，通过微信即可听课，学习资料和课件会在上课的班级微信群里分享，作业会在微信群里提交。",
+          },
+          {
+            question: "价钱能否打折？ ",
+            answer: "除特殊营销活动外，课程不提供折扣。 ",
+          },
+          {
+            question: "报名后发现不合适怎么办？ ",
+            answer:
+              "项目不接受退款，确保您是真的需要在进行报名，报完名之后还请认真学习。",
+          },
+          // 其他问题和答案...
+        ];
+
+        var faqContainer = $("#faq-container");
+
+        // 循环生成问题和答案的 HTML 结构
+        $.each(faqData, function (index, faq) {
+          var container = $("<div>").addClass("question-container");
+          var title = $("<h3>").addClass("question-title").text(faq.question);
+          var content = $("<div>")
+            .addClass("question-content")
+            .text(faq.answer);
+          container.append(title, content);
+          faqContainer.append(container);
+        });
+      });
+
+      $(document).ready(function () {
+        // 加载顶部
+        $("#header").load("common/header.html");
         // 加载底部
-        $(document).ready(function() {
-            var faqData = [
-            {
-                    question: "上课的模式是什么？",
-                    answer: "课程采取直播加录播的形式，链接会发在班级群里。所有报名学员均会在班级群里，项目会配备一个班主任老师，会负责群内作业收发以及各项事务的通知。 "
-                },
-                {
-                    question: "背景提升项目和学校上课项目区别是什么？",
-                    answer: "项目会以Corporate Level的企业咨询项目为主体，遵循工业界项目的进行流程，项目会以咨询公司工作经验的形式展现在简历上，补充同学简历经验不足这一最大求职短板。"
-                },
-                {
-                    question: "适合什么水平的同学，需要具备什么样的技能为条件？跟不上项目怎么办？ ",
-                    answer: "0基础可学，课程分为基础理论和项目实操两个大的板块，不需要项目同学有预备知识。项目老师有固定的答疑时间（Office Hour），有项目相关问题可集中提问。"
-                },
-                {
-                    question: "课程一周几次？一次课多久？ ",
-                    answer: "直播课每日晚上时间，录播课也是在相应时间放出视频 ，项目正式开始后，每周会有答疑课（Office Hour）。 "
-                },
-                {
-                    question: "如果没有赶上直播课怎么办？ ",
-                    answer: "所有课程我们都会提供录播视频，班主任老师会即时更新到班级社群。 "
-                },
-                {
-                    question: "项目中遇到问题找谁？",
-                    answer: "班主任老师在项目群里会负责关于听课、学习材料发送、视频播放等问题的处理。 "
-                },
-                {
-                    question: "录播课程的有效期是多长？ ",
-                    answer: "有效期为课程结束后三个月，即在直播结束三个月内可继续观看录播视频。"
-                },
-                {
-                    question: "课程在什么平台？课程里的学习资料以什么形式分享？ ",
-                    answer: "直播课程会通过线上授课软件进行，通过微信即可听课，学习资料和课件会在上课的班级微信群里分享，作业会在微信群里提交。"
-                },
-                {
-                    question: "价钱能否打折？ ",
-                    answer: "除特殊营销活动外，课程不提供折扣。 "
-                },
-                {
-                    question: "报名后发现不合适怎么办？ ",
-                    answer: "项目不接受退款，确保您是真的需要在进行报名，报完名之后还请认真学习。"
-                },
-                // 其他问题和答案...
-               
-            ];
+        $("#footer").load("common/footer.html");
 
-            var faqContainer = $("#faq-container");
+        // 默认显示第一个 Tab
+        $(".tab-content:first").addClass("active");
+        $(".project-tab:first").addClass("active");
 
-            // 循环生成问题和答案的 HTML 结构
-            $.each(faqData, function(index, faq) {
-                var container = $("<div>").addClass("question-container");
-                var title = $("<h3>").addClass("question-title").text(faq.question);
-                var content = $("<div>").addClass("question-content").text(faq.answer);
-                container.append(title, content);
-                faqContainer.append(container);
-            });
-            });
+        // 默认展开第一个标题对应的内容
+        $(
+          ".question-container-mobile:first-child .question-content-mobile"
+        ).show();
+        $(".question-container-mobile").hover(
+          function () {
+            // 隐藏所有内容
+            // $('.tab-content').removeClass('active');
+            $(".question-content-mobile").hide();
+            // 鼠标移入时显示内容
+            $(this).find(".question-content-mobile").show();
+            $(this).find(".tab-content").addClass("active");
+          },
+          function () {
+            // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+            var container = $(this);
+            var title = container.find(".question-title-mobile");
+            var content = container.find(".question-content-mobile");
 
-        $(document).ready(function() {
-            // 加载顶部
-            $('#header').load('common/header.html');
-            // 加载底部
-            $('#footer').load('common/footer.html');
+            // 判断鼠标是否在标题和内容内移动
+            var isHover = title.is(":hover") || content.is(":hover");
+            if (!isHover) {
+              content.hide();
+            }
+          }
+        );
 
-            // 默认显示第一个 Tab
-            $('.tab-content:first').addClass('active');
-            $('.project-tab:first').addClass('active');
+        // 点击 Tab 切换内容
+        $(".project-tab").click(function () {
+          var tabId = $(this).data("tab");
 
+          // 隐藏所有内容
+          $(".tab-content").removeClass("active");
+          $(".project-tab").removeClass("active");
 
-            // 默认展开第一个标题对应的内容
-            $('.question-container-mobile:first-child .question-content-mobile').show();
-            $('.question-container-mobile').hover(
-                function() {
-                // 隐藏所有内容
-                // $('.tab-content').removeClass('active');
-                $('.question-content-mobile').hide();
-                // 鼠标移入时显示内容
-                $(this).find('.question-content-mobile').show();
-                $(this).find('.tab-content').addClass('active');
-                },
-                function() {
-                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
-                var container = $(this);
-                var title = container.find('.question-title-mobile');
-                var content = container.find('.question-content-mobile');
-
-                // 判断鼠标是否在标题和内容内移动
-                var isHover = title.is(':hover') || content.is(':hover');
-                if (!isHover) {
-                    content.hide();
-                }
-                }
-            );
-
-            // 点击 Tab 切换内容
-            $('.project-tab').click(function() {
-                var tabId = $(this).data('tab');
-
-                // 隐藏所有内容
-                $('.tab-content').removeClass('active');
-                $('.project-tab').removeClass('active');
-
-                // 显示选中的 Tab 内容
-                $('#' + tabId).addClass('active');
-                $(this).addClass('active');
-            });
-
-            // 默认展开第一个标题对应的内容
-            $('.question-container:first-child .question-content').show();
-            $('.question-container').hover(
-                function() {
-                // 鼠标移入时显示内容
-                $(this).find('.question-content').show();
-                },
-                function() {
-                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
-                var container = $(this);
-                var title = container.find('.question-title');
-                var content = container.find('.question-content');
-
-                // 判断鼠标是否在标题和内容内移动
-                var isHover = title.is(':hover') || content.is(':hover');
-                if (!isHover) {
-                    content.hide();
-                }
-                }
-            );
-
-            var events = [
-            // {
-            //     date: '2023-01-01',
-            //     title: 'Event 1',
-            //     content: 'Event 1 content goes here...'
-            // },
-            // {
-            //     date: '2023-02-01',
-            //     title: 'Event 2',
-            //     content: 'Event 2 content goes here...'
-            // },
-            // 添加更多事件
-            ];
-
-            $.each(events, function(index, event) {
-            var $event = $('<div class="timeline-event"></div>');
-            var $eventDate = $('<div class="event-date">' + event.date + '</div>');
-            var $eventContent = $('<div class="event-content"></div>');
-            var $eventTitle = $('<h3>' + event.title + '</h3>');
-            var $eventDescription = $('<p>' + event.content + '</p>');
-
-            $eventContent.append($eventTitle, $eventDescription);
-            $event.append($eventDate, $eventContent);
-            $('#timeline-container').append($event);
-            });
-
-
+          // 显示选中的 Tab 内容
+          $("#" + tabId).addClass("active");
+          $(this).addClass("active");
         });
 
- </script>
-</body>
+        // 默认展开第一个标题对应的内容
+        $(".question-container:first-child .question-content").show();
+        $(".question-container").hover(
+          function () {
+            // 鼠标移入时显示内容
+            $(this).find(".question-content").show();
+          },
+          function () {
+            // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+            var container = $(this);
+            var title = container.find(".question-title");
+            var content = container.find(".question-content");
 
+            // 判断鼠标是否在标题和内容内移动
+            var isHover = title.is(":hover") || content.is(":hover");
+            if (!isHover) {
+              content.hide();
+            }
+          }
+        );
+
+        var events = [
+          // {
+          //     date: '2023-01-01',
+          //     title: 'Event 1',
+          //     content: 'Event 1 content goes here...'
+          // },
+          // {
+          //     date: '2023-02-01',
+          //     title: 'Event 2',
+          //     content: 'Event 2 content goes here...'
+          // },
+          // 添加更多事件
+        ];
+
+        $.each(events, function (index, event) {
+          var $event = $('<div class="timeline-event"></div>');
+          var $eventDate = $(
+            '<div class="event-date">' + event.date + "</div>"
+          );
+          var $eventContent = $('<div class="event-content"></div>');
+          var $eventTitle = $("<h3>" + event.title + "</h3>");
+          var $eventDescription = $("<p>" + event.content + "</p>");
+
+          $eventContent.append($eventTitle, $eventDescription);
+          $event.append($eventDate, $eventContent);
+          $("#timeline-container").append($event);
+        });
+      });
+    </script>
+  </body>
 </html>
