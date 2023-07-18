@@ -31,6 +31,7 @@
         color: #838383;
         border-right: 2px solid #fff;
         height: 470px;
+        width: 100%;
       }
 
       .project-tab {
@@ -103,12 +104,14 @@
         align-items: flex-start;
         padding: 20px 0px;
         margin-bottom: 30px;
+        min-width: 100%;
       }
       .question-title {
         line-height: 34px;
         color: #1b1b1b;
         cursor: pointer;
         margin-left: 20px;
+        width: 100%;
       }
 
       .question-title-mobile {
@@ -116,6 +119,7 @@
         color: #1b1b1b;
         cursor: pointer;
         margin-left: 20px;
+        width: 100%;
       }
       .question-content {
         display: none;
@@ -631,27 +635,38 @@
         $(
           ".question-container-mobile:first-child .question-content-mobile"
         ).show();
-        $(".question-container-mobile").hover(
-          function () {
-            // 隐藏所有内容
-            // $('.tab-content').removeClass('active');
-            $(".question-content-mobile").hide();
-            // 鼠标移入时显示内容
-            $(this).find(".question-content-mobile").show();
-          },
-          function () {
-            // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
-            var container = $(this);
-            var title = container.find(".question-title-mobile");
-            var content = container.find(".question-content-mobile");
+     
+        Array.from(document.getElementsByClassName('question-container-mobile')).forEach(elem => {
+              elem.addEventListener('click', function () {
 
-            // 判断鼠标是否在标题和内容内移动
-            var isHover = title.is(":hover") || content.is(":hover");
-            if (!isHover) {
-              content.hide();
-            }
-          }
-        );
+                if ($(this).find('.question-content-mobile').hasClass('active')) {
+                  $('.question-content-mobile').hide();
+                  $('.question-content-mobile').removeClass('active');
+
+                  return;
+                }
+
+                // 隐藏所有内容
+                $('.question-content-mobile').hide();
+                $('.question-content-mobile').removeClass('active');
+
+                // 鼠标移入时显示内容
+                $(this).find('.question-content-mobile').show();
+                $(this).find('.tab-content').addClass('active');
+                },
+                function() {
+                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+                var container = $(this);
+                var title = container.find('.question-title-mobile');
+                var content = container.find('.question-content-mobile');
+
+                // 判断鼠标是否在标题和内容内移动
+                var isHover = title.is(':hover') || content.is(':hover');
+                if (!isHover) {
+                    content.hide();
+                }
+              })
+            })
         // 默认展开第一个标题对应的内容
         $(".question-container:first-child .question-content").show();
         $(".question-container").hover(

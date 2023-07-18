@@ -1913,7 +1913,7 @@ span.student-lecture-number {
 
 .adivisor-text-title-2 h4 {
   font-size: 30px;
-  line-height: ;
+  /* line-height: ; */
 }
 
 .adivisor-text-2 {
@@ -3973,8 +3973,8 @@ span.opening-date {
 }
 .customization-services {
   position: fixed;
-  top: 150px;
-  right: 38px;
+  bottom: 69px;
+  right: 15px;
   width: 191px;
   height: 221px;
   padding: 8px 8px;
@@ -3983,6 +3983,12 @@ span.opening-date {
   border-radius: 6px;
   text-align: center;
 }
+
+.showPc {
+  top: 150px;
+  right: 38px;
+}
+
 .customization-services p {
   font-size: 14px;
   line-height: 20px;

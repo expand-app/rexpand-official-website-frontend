@@ -1186,7 +1186,6 @@
   }
 
   .author-comments-avatar img {
-    text-align: ;
     padding-left: 40px;
     padding-bottom: 20px;
   }
@@ -1244,6 +1243,9 @@
   #about-pc {
     display: none;
   }
+  #scrollUp {
+    display: none;
+  }
   .pt-120 {
     padding-top: 60px;
   }
@@ -1287,7 +1289,8 @@
     display: none;
   }
   .job-picture-mobile {
-    display: inline-block;
+    display: 'flex';
+    justify-content: "center";
   }
   .project-time {
     position: absolute;

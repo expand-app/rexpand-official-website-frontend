@@ -176,13 +176,23 @@
             align-items: flex-start;
             padding: 20px 0px;
             margin-bottom: 30px;
+            min-width: 100%;
         }
-        .question-title-mobile {
-            line-height: 34px;
-            color: #1B1B1B;
-            cursor: pointer;
-            margin-left: 20px;
-        }
+        .question-title {
+        line-height: 34px;
+        color: #1b1b1b;
+        cursor: pointer;
+        margin-left: 20px;
+        width: 100%;
+      }
+
+      .question-title-mobile {
+        line-height: 34px;
+        color: #1b1b1b;
+        cursor: pointer;
+        margin-left: 20px;
+        width: 100%;
+      }
         .question-content-mobile {
             display: none;
             font-weight: 400;
@@ -248,7 +258,7 @@
                     </ul>
                 </div> -->
             </div>
-            <div class="row col-xl-12 mb-90s">
+            <div class="row col-xl-12 mb-90s" style="margin: 0">
                 <div class="card bg-white mb-20">
                     <h3 class="weight500 lh36">适合学员</h3>
                     <h4 class="color61">想求职投行等金融领域工作的同学，或正在探索职业方向，想了解投行项目的同学</h4>
@@ -267,8 +277,8 @@
     <div class="question-area-mobile gray-bg pt-120 pb-120 col-xl-12">
       <div class="container">
           <h1 class="weight500 text-center mb-90">课程大纲</h1>
-          <div class="row"> 
-              <div class="project-content-mobile">
+          <div class="row" style="display: flex; justify-content: center;"> 
+              <div class="project-content-mobile" style="width: 100%">
                   <div class="question-container-mobile">
                       <h3 class="question-title">
                           第一个月
@@ -434,66 +444,63 @@
         <div class="container">
             <h1 class="mb-20 weight500 text-center">课程大纲</h1>
             <!-- <h3 class="mb-50 text-center pb-20 white-color">德勤审计所有资料，保证所有Offer真实性</h3> -->
-            <div class="">
+            <div class="" style="display: flex; justify-content: center;">
                 <div class="container course-outline-area mb-50 mt-30">
                     <div class="project-tabs col-xl-3 pt-50">
                       <div class="project-tab active" data-tab="tab1">第一个月</div>
                       <div class="project-tab" data-tab="tab2">第二个月</div>
-                      <!-- <div class="project-tab" data-tab="tab3">第三个月</div>
-                      <div class="project-tab" data-tab="tab4">第四个月</div> -->
-                      <!-- <div class="project-tab" data-tab="tab5">日志</div> -->
                     </div>
                     <div class="course-outline-content col-xl-8 pt-50">
                         <div id="tab1" class="tab-content active">
                             <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">2个月，共21节课，直播课程+录播课程+项目实战</h4>
+                            <h4 class="color83 mb-50">2个月，共20节课，直播课程+录播课程+项目实战</h4>
                             <div id="timeline-container">
                                 <div class="timeline-event">
                                   <div class="event-date theme-color">第一节</div>
                                   <ul class="event-content color83" >
-                                    <li> 公开课</li>
+                                    <li>投行核心技能、项目背景介绍、模型 Overview 以及需要的知识点</li>
                                   </ul>
                                 </div>
                                 <div class="timeline-event">
                                     <div class="event-date theme-color">第二节</div>
                                     <ul class="event-content color83" >
-                                      <li>投行各部门介绍以及核心技能</li>
+                                      <li>财务报表基础</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第三节</div>
                                     <ul class="event-content color83" >
-                                      <li>投行核心技能以及项目背景介绍</li>
+                                      <li>直播答疑</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第四节</div>
                                     <ul class="event-content color83" >
-                                      <li>模型 Overview 以及需要的知识点</li>
+                                      <li>金钱的时间价值及现金流折现模型介绍</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第五节</div>
                                     <ul class="event-content color83" >
-                                      <li>财务报表基础</li>
+                                      <li>直播答疑</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第六节</div>
                                     <ul class="event-content color83" >
-                                      <li>金钱的时间价值</li>
+                                      <li>Operating Model的建立 - Pied Piper</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第七节</div>
                                     <ul class="event-content color83" >
-                                      <li>现金流折现模型介绍</li>
+                                      <li>直播建模</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第八节</div>
                                     <ul class="event-content color83" >
-                                      <li>Excel 建模基础 1 - Excel 建模最优秀操作方法</li>
+                                      <li>Excel 建模基础 1 - Excel建模最优秀操作方法</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
@@ -505,13 +512,7 @@
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第十节</div>
                                     <ul class="event-content color83" >
-                                      <li>DCF 估值模型构建 1 - 财务预测</li>
-                                    </ul>
-                                  </div>
-                                  <div class="timeline-event">
-                                    <div class="event-date theme-color">第十一节</div>
-                                    <ul class="event-content color83" >
-                                      <li>DCF 估值模型构建 2 - 现金流预测 上</li>
+                                      <li>直播答疑</li>
                                     </ul>
                                   </div>
                                 <!-- 添加更多事件 -->
@@ -519,67 +520,66 @@
                         </div>
                         <div id="tab2" class="tab-content">
                             <h3 class="weight500 lh36">课程排期</h3>
-                            <h4 class="color83 mb-50">2个月，共21节课，直播课程+录播课程+项目实战</h4>
+                            <h4 class="color83 mb-50">2个月，共20节课，直播课程+录播课程+项目实战</h4>
                             <div id="timeline-container">
+                              <div class="timeline-event">
+                                <div class="event-date theme-color">第十一节</div>
+                                <ul class="event-content color83" >
+                                  <li>DCF估值模型构建 1 - 财务预测</li>
+                                </ul>
+                              </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第十二节</div>
                                     <ul class="event-content color83" >
-                                      <li>DCF 估值模型构建 3 -现 金流预测 下</li>
+                                      <li>DCF估值模型构建 2 - 现金流预测 上</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第十三节</div>
                                     <ul class="event-content color83" >
-                                        <li>DCF 估值模型构建 4 - 构建加权平均成本 上</li>
+                                        <li>DCF估值模型构建 3 - 现金流预测 下</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                     <div class="event-date theme-color">第十四节</div>
                                     <ul class="event-content color83" >
-                                      <li>DCF 估值模型构建 5 - 构建加权平均成本 下</li>
+                                      <li>DCF估值模型构建 4 - 构建加权平均成本 上</li>
                                     </ul>
                                   </div>
                                   <div class="timeline-event">
                                       <div class="event-date theme-color">第十五节</div>
                                       <ul class="event-content color83" >
-                                          <li>Public Comps 模型构建 1- 可比公司筛选&估值乘数选择</li>
+                                          <li>DCF估值模型构建 5 - 构建加权平均成本 下</li>
                                       </ul>
                                     </div>
                                     <div class="timeline-event">
                                       <div class="event-date theme-color">第十六节</div>
                                       <ul class="event-content color83" >
-                                          <li>Public Comps 模型构建 2 - 估值模型构建&DCF对比</li>
+                                          <li>Public Comps模型构建 1- 可比公司筛选&估值乘数选择</li>
                                       </ul>
                                     </div>
                                     <div class="timeline-event">
                                       <div class="event-date theme-color">第十七节</div>
                                       <ul class="event-content color83" >
-                                        <li>合伙人模型复盘会议</li>
+                                        <li>Public Comps模型构建 2 - 估值模型构建&DCF对比</li>
                                       </ul>
                                     </div>
                                     <div class="timeline-event">
                                       <div class="event-date theme-color">第十八节</div>
                                       <ul class="event-content color83" >
-                                        <li>估值模型报告与 Memo 撰写</li>
+                                        <li>合伙人模型复盘会议</li>
                                       </ul>
                                     </div>
                                     <div class="timeline-event">
                                       <div class="event-date theme-color">第十九节</div>
                                       <ul class="event-content color83" >
-                                        <li>Operating Model 的建立 - Pied Piper</li>
+                                        <li>估值模型报告与Memo撰写</li>
                                       </ul>
                                     </div>
                                     <div class="timeline-event">
                                       <div class="event-date theme-color">第二十节</div>
                                       <ul class="event-content color83" >
-                                        <li>杠杆收购模型介绍</li>
-                                        <!-- <li>Deploy Backend to AWS</li> -->
-                                      </ul>
-                                    </div>
-                                    <div class="timeline-event">
-                                      <div class="event-date theme-color">第二十一节</div>
-                                      <ul class="event-content color83" >
-                                          <li>项目简历撰写 & 在面试中如果描述项目经历</li>
+                                        <li>项目简历撰写 & 在面试中如何描述项目经历</li>
                                       </ul>
                                     </div>
                                 <!-- 添加更多事件 -->
@@ -732,28 +732,38 @@
 
                         // 默认展开第一个标题对应的内容
             $('.question-container-mobile:first-child .question-content-mobile').show();
-            $('.question-container-mobile').hover(
-                function() {
-                  // 隐藏所有内容
-                  // $('.tab-content').removeClass('active');
-                  $('.question-content-mobile').hide();
-                  // 鼠标移入时显示内容
-                  $(this).find('.question-content-mobile').show();
-                  $(this).find('.tab-content').addClass('active');
-                  },
-                  function() {
-                  // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
-                  var container = $(this);
-                  var title = container.find('.question-title-mobile');
-                  var content = container.find('.question-content-mobile');
 
-                  // 判断鼠标是否在标题和内容内移动
-                  var isHover = title.is(':hover') || content.is(':hover');
-                  if (!isHover) {
-                      content.hide();
-                  }
+            Array.from(document.getElementsByClassName('question-container-mobile')).forEach(elem => {
+              elem.addEventListener('click', function () {
+
+                if ($(this).find('.question-content-mobile').hasClass('active')) {
+                  $('.question-content-mobile').hide();
+                  $('.question-content-mobile').removeClass('active');
+
+                  return;
                 }
-            );
+
+                // 隐藏所有内容
+                $('.question-content-mobile').hide();
+                $('.question-content-mobile').removeClass('active');
+
+                // 鼠标移入时显示内容
+                $(this).find('.question-content-mobile').show();
+                $(this).find('.tab-content').addClass('active');
+                },
+                function() {
+                // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
+                var container = $(this);
+                var title = container.find('.question-title-mobile');
+                var content = container.find('.question-content-mobile');
+
+                // 判断鼠标是否在标题和内容内移动
+                var isHover = title.is(':hover') || content.is(':hover');
+                if (!isHover) {
+                    content.hide();
+                }
+              })
+            })
 
             // 默认展开第一个标题对应的内容
             $('.question-container:first-child .question-content').show();
