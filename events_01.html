@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/project.css" />
     <style>
       .project-tabs {
         flex: 0 0 200px;
@@ -97,15 +98,6 @@
         padding: 20px 0px;
         margin-bottom: 30px;
       }
-      .question-container-mobile {
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 0px;
-        margin-bottom: 30px;
-        min-width: 100%;
-      }
       .question-title {
         line-height: 34px;
         color: #1b1b1b;
@@ -114,13 +106,6 @@
         width: 100%;
       }
 
-      .question-title-mobile {
-        line-height: 34px;
-        color: #1b1b1b;
-        cursor: pointer;
-        margin-left: 20px;
-        width: 100%;
-      }
       .question-content {
         display: none;
         font-weight: 400;
@@ -130,15 +115,7 @@
         margin-left: 20px;
         /* padding: 10px; */
       }
-      .question-content-mobile {
-        display: none;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: #838383;
-        margin-left: 20px;
-        /* padding: 10px; */
-      }
+
       .popup {
         position: fixed;
         top: 50%;
@@ -384,16 +361,28 @@
         <h1 class="weight500 text-center mb-90">项目安排</h1>
         <div class="row">
           <div class="project-content">
-            <div class="question-container-mobile">
-              <h3 class="question-title-mobile">第一阶段</h3>
-              <div class="question-content-mobile tab-content">
-                <h2 class="mb-35 theme-color">
-                  职业规划服务/Career Consultation
-                </h2>
-                <div class="project-time">
-                  <span class="bg-green white-color">预计</span>
-                  <span>2周</span>
+
+            <div class="project-container-mobile">
+              <div class="project-title-container-mobile">
+                <h2 class="project-title-text-mobile">第一阶段</h3>
+              </div>
+              
+              <div class="project-content-mobile tab-content">
+                <div class="project-content-title-container-mobile">
+                  <h3 class="mb-0 theme-color">
+                    职业规划服务/Career Consultation
+                  </h3>
+
+                  <div class="grow"></div>
+
+                  <div class="project-duration-container-mobile">
+                    <div class="project-duration-mobile">
+                      <div class="bg-green white-color">预计</div>
+                      <div>2周</div>
+                    </div>
+                  </div>
                 </div>
+
                 <span class="title mb-30"> 具体内容 </span>
                 <p>
                   带领同学进行美国就业总览，进行职业规划与设计，完成求职目标和方向的敲定。
@@ -405,14 +394,26 @@
                 </ul>
               </div>
             </div>
-            <div class="question-container-mobile">
-              <h3 class="question-title-mobile">第二阶段</h3>
-              <div class="question-content-mobile tab-content">
-                <h2 class="mb-35 theme-color">简历服务/Resume</h2>
-                <div class="project-time">
-                  <span class="bg-green white-color">预计</span>
-                  <span>4周</span>
+
+            <div class="project-container-mobile">
+              <div class="project-title-container-mobile">
+                <h2 class="project-title-text-mobile">第二阶段</h3>
+
+
+              </div>
+
+              <div class="project-content-mobile tab-content">
+                <div class="project-content-title-container-mobile">
+                  <h3 class="mb-0 theme-color">简历服务/Resume</h3>
+
+                  <div class="grow"></div>
+
+                  <div class="project-duration-mobile">
+                    <div class="bg-green white-color">预计</div>
+                    <div>4周</div>
+                  </div>
                 </div>
+
                 <span class="title mb-30"> 具体内容 </span>
                 <p>
                   根据original
@@ -428,14 +429,28 @@
                 </ul>
               </div>
             </div>
-            <div class="question-container-mobile">
-              <h3 class="question-title-mobile">第三阶段</h3>
-              <div class="question-content-mobile tab-content">
-                <h2 class="mb-35 theme-color">内推服务/Internal Referral</h2>
-                <div class="project-time">
-                  <span class="bg-green white-color">预计</span>
-                  <span>6周</span>
+
+            <div class="project-container-mobile">
+              <div class="project-title-container-mobile">
+                <h2 class="project-title-text-mobile">第三阶段</h2>
+              </div>
+
+              <div class="project-content-mobile tab-content">
+                <div class="project-content-title-container-mobile">
+                  <h3 class="mb-0 theme-color">
+                    内推服务/Internal Referral
+                  </h3>
+
+                  <div class="grow"></div>
+
+                  <div class="project-duration-container-mobile">
+                    <div class="project-duration-mobile">
+                      <div class="bg-green white-color">预计</div>
+                      <div>6周</div>
+                    </div>
+                  </div>
                 </div>
+
                 <span class="title mb-30"> 具体内容 </span>
                 <p>
                   根据同学求职目标，为其推荐最匹配的实习或全职职位。带领同学深度使用领英，进行求职社交技能培训，辅导同学精修cover
@@ -452,14 +467,33 @@
                 </ul>
               </div>
             </div>
-            <div class="question-container-mobile">
-              <h3 class="question-title-mobile">第四阶段</h3>
-              <div class="question-content-mobile tab-content">
-                <h2 class="mb-35 theme-color">面试服务/Interview</h2>
+
+            <div class="project-container-mobile">
+              <div class="project-title-container-mobile">
+                <h2 class="project-title-text-mobile">第四阶段</h2>
+              </div>
+
+              <div class="project-content-mobile tab-content">
+                <div class="project-content-title-container-mobile">
+                  <h3 class="mb-0 theme-color">
+                    面试服务/Interview
+                  </h3>
+
+                  <div class="grow"></div>
+
+                  <div class="project-duration-container-mobile">
+                    <div class="project-duration-mobile">
+                      <div class="bg-green white-color">预计</div>
+                      <div>8周</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <h2 class="mb-35 theme-color">面试服务/Interview</h2>
                 <div class="project-time">
                   <span class="bg-green white-color">预计</span>
                   <span>8周</span>
-                </div>
+                </div> -->
                 <span class="title mb-30"> 具体内容 </span>
                 <p>
                   对同学进行行业知识与技术知识（Industry knowledge & Technical
@@ -633,32 +667,32 @@
         });
         // 默认展开第一个标题对应的内容
         $(
-          ".question-container-mobile:first-child .question-content-mobile"
+          ".project-container-mobile:first-child .project-content-mobile"
         ).show();
      
-        Array.from(document.getElementsByClassName('question-container-mobile')).forEach(elem => {
+        Array.from(document.getElementsByClassName('project-container-mobile')).forEach(elem => {
               elem.addEventListener('click', function () {
 
-                if ($(this).find('.question-content-mobile').hasClass('active')) {
-                  $('.question-content-mobile').hide();
-                  $('.question-content-mobile').removeClass('active');
+                if ($(this).find('.project-content-mobile').hasClass('active')) {
+                  $('.project-content-mobile').hide();
+                  $('.project-content-mobile').removeClass('active');
 
                   return;
                 }
 
                 // 隐藏所有内容
-                $('.question-content-mobile').hide();
-                $('.question-content-mobile').removeClass('active');
+                $('.project-content-mobile').hide();
+                $('.project-content-mobile').removeClass('active');
 
                 // 鼠标移入时显示内容
-                $(this).find('.question-content-mobile').show();
+                $(this).find('.project-content-mobile').show();
                 $(this).find('.tab-content').addClass('active');
                 },
                 function() {
                 // 鼠标移出时判断是否在容器内移动，如果不是则隐藏内容
                 var container = $(this);
-                var title = container.find('.question-title-mobile');
-                var content = container.find('.question-content-mobile');
+                var title = container.find('.project-title-text-mobile');
+                var content = container.find('.project-content-mobile');
 
                 // 判断鼠标是否在标题和内容内移动
                 var isHover = title.is(':hover') || content.is(':hover');
