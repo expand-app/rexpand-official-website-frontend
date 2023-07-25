@@ -8,7 +8,7 @@
 
         // One Page Nav
         var top_offset = $('.header-area').height() - 5;
-        $('.main-menu nav ul').onePageNav({
+        $('.main-menu nav ul li').onePageNav({
             currentClass: 'active',
             scrollOffset: top_offset,
         });

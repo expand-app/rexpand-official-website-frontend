@@ -75,6 +75,29 @@
         overflow: hidden; /* 禁用背景区域的滚动 */
       }
     </style>
+
+        <!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/one-page-nav-min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.barfiller.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/57916739c45c9dc951ca7d7b5/cccb513590823404054087bbb.js");</script>
   </head>
 
   <body>
@@ -181,26 +204,7 @@
         </div> -->
     </div>
     <div id="overlay" class="overlay"></div>
-    <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/one-page-nav-min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.meanmenu.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+
     <script>
       $(document).ready(function () {
         $("#free-materials").click(function () {
@@ -233,5 +237,44 @@
         }
       });
     </script>
+
+    <script>
+      (function(apiKey){
+          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+          v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+              o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+              y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+              z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+      
+              // This function creates anonymous visitor IDs in Pendo unless you change the visitor id field to use your app's values
+              // This function uses the placeholder 'ACCOUNT-UNIQUE-ID' value for account ID unless you change the account id field to use your app's values
+              // Call this function after users are authenticated in your app and your visitor and account id values are available
+              // Please use Strings, Numbers, or Bools for value types.
+              pendo.initialize({
+                  visitor: {
+                      id:              'VISITOR-UNIQUE-ID'   // Required if user is logged in, default creates anonymous ID
+                      // email:        // Recommended if using Pendo Feedback, or NPS Email
+                      // full_name:    // Recommended if using Pendo Feedback
+                      // role:         // Optional
+      
+                      // You can add any additional visitor level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  },
+      
+                  account: {
+                      id:           'ACCOUNT-UNIQUE-ID' // Required if using Pendo Feedback, default uses the value 'ACCOUNT-UNIQUE-ID'
+                      // name:         // Optional
+                      // is_paying:    // Recommended if using Pendo Feedback
+                      // monthly_value:// Recommended if using Pendo Feedback
+                      // planLevel:    // Optional
+                      // planPrice:    // Optional
+                      // creationDate: // Optional
+      
+                      // You can add any additional account level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  }
+              });
+      })('ffcc514b-15e1-4e38-7a13-9a49f1261466');
+      </script>
   </body>
 </html>
