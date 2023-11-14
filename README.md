@@ -9,9 +9,9 @@ web
  ├── advisors.html             -- 关于我们
  ├── events_01.html            -- vip项目
  ├── course_01.html            -- 成功案例
- ├── project_01.html           -- 背景提升项目-全栈工程师
- ├── project_02.html           -- 背景提升项目-投行建模
- ├── project_03.html           -- 背景提升项目-市场分析
+ ├── project_01.html           -- 美国实习项目-全栈工程师
+ ├── project_02.html           -- 美国实习项目-投行建模
+ ├── project_03.html           -- 美国实习项目-市场分析
  ├── 文件夹                      -- 源代码
  │   ├── brandCarousel          -- 轮播图的代码插件
  │   ├── common                 -- 公共组件
